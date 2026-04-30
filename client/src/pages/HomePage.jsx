@@ -3,12 +3,12 @@
 // no server fetch needed. This keeps cvData.js as the single source of truth.
 
 import { Navigate } from 'react-router-dom'
-import { defaultVersion } from '../data/cvData'
+import { defaultSlug } from '../data/cv-store'
 
 // Redirect / → /cv/<defaultVersion> so there is only one code path for rendering.
 // This means editing cvData.js is all you ever need to do.
 const HomePage = () => {
-  return <Navigate to={`/cv/${defaultVersion}`} replace />
+  return <Navigate to={`/cv/${defaultSlug}`} replace />
 }
 
 export default HomePage

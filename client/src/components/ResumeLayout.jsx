@@ -27,8 +27,8 @@ const ResumeLayout = ({ resume, slug }) => {
     <Page>
       <Page.Content>
         <Box paddingTop="18px" paddingBottom="36px">
-          {/* Version switcher — shows all role links, highlights the current one */}
-          <CvVersionBanner currentSlug={slug} />
+          {/* Show version switcher only on public pages; private CVs have no banner */}
+          {!resume.isPrivate && <CvVersionBanner currentSlug={slug} />}
 
           <Layout>
             {/* Profile header spans the full 12-column grid */}

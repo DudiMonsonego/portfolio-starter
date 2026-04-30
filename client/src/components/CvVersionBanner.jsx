@@ -7,7 +7,7 @@
 
 import { useNavigate } from 'react-router-dom'
 import { Box, Text, TextButton } from '@wix/design-system'
-import { cvVersionList } from '../data/cvData'
+import { publicVersions } from '../data/cv-store'
 
 const CvVersionBanner = ({ currentSlug }) => {
   const navigate = useNavigate()
@@ -31,7 +31,7 @@ const CvVersionBanner = ({ currentSlug }) => {
       </Text>
 
       {/* One button per version — active version is shown as plain text */}
-      {cvVersionList.map(({ slug, label }) => {
+      {publicVersions.map(({ slug, label }) => {
         const isActive = slug === currentSlug
         return isActive ? (
           // Active version — not clickable, visually highlighted

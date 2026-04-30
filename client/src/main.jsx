@@ -7,6 +7,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'
+import { HelmetProvider } from 'react-helmet-async'
 import { WixDesignSystemProvider } from '@wix/design-system'
 import { Analytics } from '@vercel/analytics/react'
 import App from './App.jsx'
@@ -15,13 +16,16 @@ import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    {/* BrowserRouter enables client-side navigation without full page reloads */}
-    <BrowserRouter>
-      <WixDesignSystemProvider features={{ newColorsBranding: true }}>
-        <App />
-        {/* Analytics auto-tracks page views for every route in the app */}
-        <Analytics />
-      </WixDesignSystemProvider>
-    </BrowserRouter>
+    {/* HelmetProvider enables any component to inject <head> tags (e.g. noindex) */}
+    <HelmetProvider>
+      {/* BrowserRouter enables client-side navigation without full page reloads */}
+      <BrowserRouter>
+        <WixDesignSystemProvider features={{ newColorsBranding: true }}>
+          <App />
+          {/* Analytics auto-tracks page views for every route in the app */}
+          <Analytics />
+        </WixDesignSystemProvider>
+      </BrowserRouter>
+    </HelmetProvider>
   </React.StrictMode>,
 )

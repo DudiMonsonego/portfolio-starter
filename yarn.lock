@@ -2119,6 +2119,7 @@ __metadata:
     eslint-plugin-react-hooks: "npm:^4.6.0"
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
+    react-helmet-async: "npm:^3.0.0"
     react-router-dom: "npm:^7.14.1"
     vite: "npm:^5.0.8"
   languageName: unknown
@@ -3764,7 +3765,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"invariant@npm:^2.2.1":
+"invariant@npm:^2.2.1, invariant@npm:^2.2.4":
   version: 2.2.4
   resolution: "invariant@npm:2.2.4"
   dependencies:
@@ -5137,6 +5138,26 @@ __metadata:
   peerDependencies:
     react: ">=16.13.1"
   checksum: 10c0/38da5e7e81016a4750d3b090e3c740c2c1125c0bb9de14e1ab92ee3b5190d34517c199935302718a24aa35d3f89081412b3444edc23f63729bde2e862a2fbfec
+  languageName: node
+  linkType: hard
+
+"react-fast-compare@npm:^3.2.2":
+  version: 3.2.2
+  resolution: "react-fast-compare@npm:3.2.2"
+  checksum: 10c0/0bbd2f3eb41ab2ff7380daaa55105db698d965c396df73e6874831dbafec8c4b5b08ba36ff09df01526caa3c61595247e3269558c284e37646241cba2b90a367
+  languageName: node
+  linkType: hard
+
+"react-helmet-async@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "react-helmet-async@npm:3.0.0"
+  dependencies:
+    invariant: "npm:^2.2.4"
+    react-fast-compare: "npm:^3.2.2"
+    shallowequal: "npm:^1.1.0"
+  peerDependencies:
+    react: ^16.6.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
+  checksum: 10c0/bdbb2c1823ae20895aa1b854943d863bb7c5dd1b7888f7da9dd2fa9d02e2ccb9ebf68c7dd17edb39ad85ca714c009ee19ea82b03a2f1b79f7995657cd4bba825
   languageName: node
   linkType: hard
 

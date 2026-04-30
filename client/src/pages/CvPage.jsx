@@ -1,23 +1,48 @@
 // CvPage.jsx
-// Dynamic CV page rendered at /cv/:role.
-// The `role` URL parameter is used as a key to look up the matching
-// CV version from cvData. If the key doesn't exist, the default version
-// is shown instead of a 404.
+// Rendered at /cv/:slug for every CV version — public and private.
+//
+// Behaviour:
+//   - Looks up the slug in cvStore.
+//   - If not found → redirects to the default public version (no 404).
+//   - If found and isPrivate: true → injects a noindex meta tag so the page
+//     is never indexed by Google (safe to share privately with recruiters).
+//   - If found and NOT private → normal public page with version-switcher banner.
 
-import { useParams } from 'react-router-dom'
+import { useParams, Navigate } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 import ResumeLayout from '../components/ResumeLayout'
-import { cvVersions, defaultVersion } from '../data/cvData'
+import { cvStore, defaultSlug } from '../data/cv-store'
 
 const CvPage = () => {
-  // Extract the :role segment from the URL (e.g. "hr-tech", "technical-pm")
-  const { role } = useParams()
+  const { slug } = useParams()
 
-  // Look up the requested version; fall back to the default if the slug is unknown
-  const activeSlug = cvVersions[role] ? role : defaultVersion
-  const resume = cvVersions[activeSlug]
+  // If slug is unknown, redirect to the default version instead of showing an error
+  if (!cvStore[slug]) {
+    return <Navigate to={`/cv/${defaultSlug}`} replace />
+  }
 
-  // Pass the active slug so the banner can highlight the correct button
-  return <ResumeLayout resume={resume} slug={activeSlug} />
+  const resume = cvStore[slug]
+
+  return (
+    <>
+      {resume.isPrivate ? (
+        // Private (job-specific) page: tell search engines not to index it
+        <Helmet>
+          <meta name="robots" content="noindex, nofollow" />
+          <title>{resume.title} — David Monsonego</title>
+        </Helmet>
+      ) : (
+        // Public page: allow indexing and set a descriptive title
+        <Helmet>
+          <meta name="robots" content="index, follow" />
+          <title>{resume.title} — David Monsonego</title>
+        </Helmet>
+      )}
+
+      {/* Pass the slug so ResumeLayout can highlight the correct banner button */}
+      <ResumeLayout resume={resume} slug={slug} />
+    </>
+  )
 }
 
 export default CvPage
