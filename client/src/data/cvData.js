@@ -188,12 +188,22 @@ const fullstackDev = {
 }
 
 // ─── Exported versions map ────────────────────────────────────────────────────
-// Keys are the URL slugs used in /cv/:role
+// To add a new role: create a new const above, then add it here with a slug and label.
+// The slug becomes the URL: /cv/<slug>
+// The label is shown in the version switcher banner at the top of the page.
 export const cvVersions = {
   'hr-tech': hrTech,
   'technical-pm': technicalPm,
   'fullstack-dev': fullstackDev,
 }
 
-// Fallback used when an unknown slug is requested
+// Ordered list used to render the switcher banner
+// Change the order here to change the order of buttons in the banner
+export const cvVersionList = [
+  { slug: 'hr-tech',       label: 'HR Technology' },
+  { slug: 'technical-pm',  label: 'Project Manager' },
+  { slug: 'fullstack-dev', label: 'Full Stack Dev' },
+]
+
+// Fallback shown when an unknown slug is requested
 export const defaultVersion = 'hr-tech'

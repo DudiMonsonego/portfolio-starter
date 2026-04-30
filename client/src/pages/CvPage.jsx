@@ -13,9 +13,11 @@ const CvPage = () => {
   const { role } = useParams()
 
   // Look up the requested version; fall back to the default if the slug is unknown
-  const resume = cvVersions[role] ?? cvVersions[defaultVersion]
+  const activeSlug = cvVersions[role] ? role : defaultVersion
+  const resume = cvVersions[activeSlug]
 
-  return <ResumeLayout resume={resume} />
+  // Pass the active slug so the banner can highlight the correct button
+  return <ResumeLayout resume={resume} slug={activeSlug} />
 }
 
 export default CvPage
