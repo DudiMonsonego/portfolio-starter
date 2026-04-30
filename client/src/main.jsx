@@ -1,9 +1,3 @@
-// main.jsx
-// Application entry point.
-// BrowserRouter wraps the whole tree so any component can use routing hooks.
-// Analytics is placed inside the provider so it tracks every route change
-// automatically — no per-page configuration needed.
-
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'
@@ -13,15 +7,42 @@ import App from './App.jsx'
 import '@wix/design-system/styles.global.css'
 import './index.css'
 
+// Error boundary — catches any render crash and shows a plain message
+// instead of a blank white page, making problems visible.
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = { error: null }
+  }
+  static getDerivedStateFromError(error) {
+    return { error }
+  }
+  render() {
+    if (this.state.error) {
+      return (
+        <div style={{ padding: 40, fontFamily: 'sans-serif' }}>
+          <h2>Something went wrong.</h2>
+          <pre style={{ color: 'red', whiteSpace: 'pre-wrap' }}>
+            {this.state.error.message}
+          </pre>
+        </div>
+      )
+    }
+    return this.props.children
+  }
+}
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    {/* BrowserRouter enables client-side navigation without full page reloads */}
-    <BrowserRouter>
-      <WixDesignSystemProvider features={{ newColorsBranding: true }}>
-        <App />
-        {/* Analytics auto-tracks page views for every route in the app */}
-        <Analytics />
-      </WixDesignSystemProvider>
-    </BrowserRouter>
+    <ErrorBoundary>
+      {/* BrowserRouter enables client-side navigation without full page reloads */}
+      <BrowserRouter>
+        <WixDesignSystemProvider features={{ newColorsBranding: true }}>
+          <App />
+          {/* Analytics auto-tracks page views for every route in the app */}
+          <Analytics />
+        </WixDesignSystemProvider>
+      </BrowserRouter>
+    </ErrorBoundary>
   </React.StrictMode>,
 )
