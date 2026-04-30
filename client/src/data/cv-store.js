@@ -51,6 +51,26 @@ const base = {
     },
   ],
 
+  // Projects are shared across all CV versions by default.
+  // Override this array in a specific version if you want to highlight
+  // different projects for a particular role.
+  projects: [
+    {
+      name: 'IDF Unit HR Management System',
+      tech: ['React', 'Supabase', 'Looker Studio', 'Cursor / Claude Code'],
+      year: '2023 – Present',
+      description: 'Full-stack personnel management application built for a reserve-duty IDF unit. Features real-time data storage, role-based access, and automated reporting dashboards that replaced a fully manual process and reduced administrative workload by 50%.',
+      link: null,
+    },
+    {
+      name: 'Resume Portfolio Website',
+      tech: ['React', 'Vite', 'Wix Design System', 'Vercel', 'Node.js'],
+      year: '2025',
+      description: 'Dynamic multi-version portfolio site with per-role CV routing (/cv/:slug), Vercel serverless API, Google Analytics 4, and automated deployment via GitHub. Each CV version is privately shareable with individual recruiters.',
+      link: 'https://portfolio-starter-client.vercel.app',
+    },
+  ],
+
   languages: [
     { language: 'English', proficiency: 'Full professional proficiency' },
     { language: 'Hebrew',  proficiency: 'Native / bilingual proficiency' },

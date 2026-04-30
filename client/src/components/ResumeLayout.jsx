@@ -17,6 +17,7 @@ import EducationSection from './EducationSection'
 import ContactSection from './ContactSection'
 import LanguagesSection from './LanguagesSection'
 import CvVersionBanner from './CvVersionBanner'
+import ProjectsSection from './ProjectsSection'
 
 // slug: the current URL slug (e.g. "hr-tech") passed in so the banner
 // knows which version to highlight as active
@@ -48,6 +49,7 @@ const ResumeLayout = ({ resume, slug }) => {
                 <AboutSection bio={resume.bio} />
                 <ExperienceSection experience={resume.experience} />
                 <EducationSection education={resume.education} />
+                <ProjectsSection projects={resume.projects} />
               </Box>
             </Cell>
 
