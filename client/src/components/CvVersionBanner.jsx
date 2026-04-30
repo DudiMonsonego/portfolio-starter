@@ -7,7 +7,8 @@
 
 import { useNavigate } from 'react-router-dom'
 import { Box, Text, TextButton } from '@wix/design-system'
-import { publicVersions } from '../data/cv-store'
+// bannerVersions only contains public (non-private) versions
+import { bannerVersions } from '../data/cv-store'
 
 const CvVersionBanner = ({ currentSlug }) => {
   const navigate = useNavigate()
@@ -31,7 +32,7 @@ const CvVersionBanner = ({ currentSlug }) => {
       </Text>
 
       {/* One button per version — active version is shown as plain text */}
-      {publicVersions.map(({ slug, label }) => {
+      {bannerVersions.map(({ slug, label }) => {
         const isActive = slug === currentSlug
         return isActive ? (
           // Active version — not clickable, visually highlighted

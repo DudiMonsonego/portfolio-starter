@@ -5,8 +5,8 @@
 import { Navigate } from 'react-router-dom'
 import { defaultSlug } from '../data/cv-store'
 
-// Redirect / → /cv/<defaultVersion> so there is only one code path for rendering.
-// This means editing cvData.js is all you ever need to do.
+// Redirect / → /cv/<defaultSlug>.
+// All content lives in cv-store.js — that's the only file you need to edit.
 const HomePage = () => {
   return <Navigate to={`/cv/${defaultSlug}`} replace />
 }
