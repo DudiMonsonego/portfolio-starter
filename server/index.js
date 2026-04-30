@@ -15,8 +15,8 @@ const resumeData = {
   contact: {
     email: 'dudimonsonego@gmail.com',
     phone: '052-3594646',
-    linkedin: 'https://linkedin.com/in/davidmonsonego',
-    github: 'https://github.com/davidmonsonego',
+    linkedin: 'https://linkedin.com/in/david-monsonego',
+    github: 'https://github.com/dudimonsonego',
   },
   skills: [
     'SQL',
@@ -32,9 +32,8 @@ const resumeData = {
     'Java',
     'AWS',
     'Vercel',
-    'Custom HRIS',
     'API Integrations',
-    'Make (Integromat)',
+    'Make',
     'Google Apps Script',
     'Cursor / Claude Code',
     'Priority ERP',
