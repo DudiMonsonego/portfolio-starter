@@ -6,8 +6,8 @@
 const baseContact = {
   email: 'dudimonsonego@gmail.com',
   phone: '052-3594646',
-  linkedin: 'https://linkedin.com/in/davidmonsonego',
-  github: 'https://github.com/davidmonsonego',
+  linkedin: 'https://linkedin.com/in/david-monsonego',
+  github: 'https://github.com/dudimonsonego',
 }
 
 const baseLanguages = [
@@ -45,9 +45,8 @@ const hrTech = {
     'Tableau',
     'ETL Processes',
     'Advanced Excel',
-    'Custom HRIS',
     'API Integrations',
-    'Make (Integromat)',
+    'Make',
     'Google Apps Script',
     'JavaScript',
     'TypeScript',
