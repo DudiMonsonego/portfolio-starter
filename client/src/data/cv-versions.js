@@ -66,6 +66,100 @@ const baseContent = {
 // At runtime we index them by id for fast lookup.
 export const cvVersions = [
   {
+    id: '148af4f0-3845-46be-9970-67c9901aa2cc',
+    slug: 'elbit-verification-engineer-ry0',
+    created_at: '2026-05-03T12:00:00.000Z',
+    company_name: 'Elbit',
+    company_website: 'https://elbitsystems.com',
+    role_title: 'Verification Engineer',
+    status: 'Sent',
+    content: {
+      ...baseContent,
+      noindex: true,
+      label: 'Elbit — Verification Engineer',
+      title: 'Verification Engineer',
+      bio:
+        'A B.Sc. in Computer Science graduate with a solid academic foundation in hardware fundamentals, including Verilog and digital systems. Experienced in full-stack software development, technical operations, and automation. Quick learner with practical skills in C and OOP concepts, seeking to leverage academic knowledge and analytical skills in an entry-level hardware verification role.',
+      education: [
+        {
+          degree: 'Project Management Course',
+          institution: 'TechTroop / Elevation',
+          year: '2025 – 2026',
+          description: 'Project lifecycle, matrix leadership, and AI-driven data visualization.',
+        },
+        {
+          degree: 'B.Sc. Computer Science',
+          institution: 'University of Haifa',
+          year: '2020 – 2024',
+          bullets: [
+            'Core hardware coursework: Digital Systems, Introduction to Hardware (Verilog).',
+            'Core software coursework: Data Structures, Algorithms, C Programming.',
+          ],
+        },
+      ],
+      skills: [
+        'Verilog (academic)',
+        'Digital systems design (academic)',
+        'Computer architecture (academic)',
+        'C',
+        'Python',
+        'JavaScript',
+        'TypeScript',
+        'Java',
+        'SQL',
+        'PostgreSQL',
+        'Looker Studio',
+        'Advanced Excel',
+        'Linux CLI & shell scripting',
+        'Docker',
+        'GitHub',
+        'Cursor / Claude Code',
+        'Make',
+        'Zapier',
+        'Google Apps Script',
+      ],
+      experience: [
+        {
+          title: 'Technical Project Manager (HR & Operations)',
+          company: 'Reserve Duty IDF — Alexandroni Brigade',
+          year: '2023 – Present',
+          bullets: [
+            'Led the digital transformation of unit personnel systems, reducing administrative workload by 50% through workflow automation.',
+            'Developed a full-stack internal management application using Cursor (Claude Code), React, and Supabase (PostgreSQL).',
+            'Created automated data pipelines and interactive dashboards using Looker Studio and Google Sheets to improve reporting accuracy.',
+            'Optimized operational efficiency by integrating customized scripts and digital tools to streamline processes.',
+          ],
+        },
+        {
+          title: 'Branch Manager & ERP Operations',
+          company: 'Ivory Computers',
+          year: '2013 – 2019',
+          bullets: [
+            'Managed daily technical operations and workflows using Priority ERP to ensure system consistency.',
+            'Handled inventory management and logistics, maintaining high data accuracy and reducing operational errors.',
+            'Directly supervised and trained a team of technicians, ensuring high service standards.',
+          ],
+        },
+      ],
+      projects: [
+        {
+          name: 'Interactive CV & portfolio',
+          tech: ['React', 'Vite', 'Wix Design System', 'Tailwind CSS', 'Vercel'],
+          description:
+            'Multi-version resume site with readable per-role links for sharing tailored CVs with recruiters and hiring teams.',
+          link: null,
+        },
+        {
+          name: 'IDF unit personnel systems (internal)',
+          tech: ['React', 'Supabase (PostgreSQL)', 'Looker Studio', 'Automation'],
+          description:
+            'Full-stack internal application and reporting workflows supporting digital transformation and reduced manual workload.',
+          link: null,
+        },
+      ],
+    },
+  },
+  {
     id: '865e425b-bf24-4f74-8cfe-7f276d4a2195',
     slug: 'iscar-software-engineer-axp',
     created_at: '2026-05-03T00:00:00.000Z',

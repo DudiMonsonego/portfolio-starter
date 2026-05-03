@@ -7,7 +7,7 @@ import {
   Badge,
 } from '@wix/design-system'
 
-const EducationItem = ({ degree, institution, year, description, isLast }) => {
+const EducationItem = ({ degree, institution, year, description, bullets, isLast }) => {
   return (
     <Box direction="vertical">
       <Box direction="vertical" gap="6px">
@@ -20,7 +20,16 @@ const EducationItem = ({ degree, institution, year, description, isLast }) => {
         <Text size="small" weight="bold" skin="primary">
           {institution}
         </Text>
-        {description && (
+        {bullets && bullets.length > 0 && (
+          <Box direction="vertical" gap="4px">
+            {bullets.map((line, i) => (
+              <Text key={i} size="small" secondary>
+                • {line}
+              </Text>
+            ))}
+          </Box>
+        )}
+        {!bullets?.length && description && (
           <Text size="small" secondary>
             {description}
           </Text>
@@ -56,6 +65,7 @@ const EducationSection = ({ education }) => {
               institution={edu.institution}
               year={edu.year}
               description={edu.description}
+              bullets={edu.bullets}
               isLast={index === education.length - 1}
             />
           ))}
