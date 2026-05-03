@@ -1,33 +1,30 @@
 // CvPage.jsx
 // Rendered at /cv/:slug
 //
-// 1. Looks up the slug in cvStore.
-// 2. If not found, redirects to the default slug (no 404).
+// 1. Looks up the slug in cvVersions.
+// 2. If not found, renders a generic "not found" message.
 // 3. If cv.noindex is true, injects  <meta name="robots" content="noindex">
 //    so private job-specific pages are not indexed by Google.
 
 import { useEffect } from 'react'
-import { useParams, Navigate } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import ResumeLayout from '../components/ResumeLayout'
-import { cvStore, defaultSlug } from '../data/cv-store'
+import { getCvVersionBySlug } from '../data/cv-versions'
 
 const CvPage = () => {
   const { slug } = useParams()
 
-  // Resolve which CV version to show
-  const cv = cvStore[slug]
+  const version = getCvVersionBySlug(slug)
+  const cv = version?.content
 
-  // If the slug doesn't exist at all, redirect to the default version
-  if (!cv) {
-    return <Navigate to={`/cv/${defaultSlug}`} replace />
-  }
+  if (!cv) return <CvNotFound />
 
   return <CvPageContent slug={slug} cv={cv} />
 }
 
 // Separated so hooks always run in the same order (hooks can't be called after
 // an early return, which is why the redirect lives in the parent component)
-const CvPageContent = ({ slug, cv }) => {
+const CvPageContent = ({ _slug, cv }) => {
   useEffect(() => {
     // Find or create the <meta name="robots"> tag
     let meta = document.querySelector('meta[name="robots"]')
@@ -53,7 +50,35 @@ const CvPageContent = ({ slug, cv }) => {
     }
   }, [cv])
 
-  return <ResumeLayout resume={cv} slug={slug} />
+  return <ResumeLayout resume={cv} />
+}
+
+const CvNotFound = () => {
+  useEffect(() => {
+    let meta = document.querySelector('meta[name="robots"]')
+    if (!meta) {
+      meta = document.createElement('meta')
+      meta.setAttribute('name', 'robots')
+      document.head.appendChild(meta)
+    }
+    meta.setAttribute('content', 'noindex, nofollow')
+
+    const originalTitle = document.title
+    document.title = 'CV not found'
+    return () => {
+      meta.setAttribute('content', 'index, follow')
+      document.title = originalTitle
+    }
+  }, [])
+
+  return (
+    <div style={{ padding: 40, fontFamily: 'system-ui, -apple-system, Segoe UI, Roboto, sans-serif' }}>
+      <h2 style={{ marginTop: 0 }}>This CV link is invalid or expired.</h2>
+      <p style={{ marginBottom: 0 }}>
+        Please ask the sender for an updated link.
+      </p>
+    </div>
+  )
 }
 
 export default CvPage

@@ -16,21 +16,15 @@ import SkillsSection from './SkillsSection'
 import EducationSection from './EducationSection'
 import ContactSection from './ContactSection'
 import LanguagesSection from './LanguagesSection'
-import CvVersionBanner from './CvVersionBanner'
 import ProjectsSection from './ProjectsSection'
 
-// slug: the current URL slug (e.g. "hr-tech") passed in so the banner
-// knows which version to highlight as active
-const ResumeLayout = ({ resume, slug }) => {
+const ResumeLayout = ({ resume }) => {
   if (!resume) return null
 
   return (
     <Page>
       <Page.Content>
         <Box paddingTop="18px" paddingBottom="36px">
-          {/* Version switcher — shows all role links, highlights the current one */}
-          <CvVersionBanner currentSlug={slug} />
-
           <Layout>
             {/* Profile header spans the full 12-column grid */}
             <Cell span={12}>

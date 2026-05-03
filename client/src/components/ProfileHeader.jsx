@@ -14,7 +14,7 @@ const ProfileHeader = ({ name, title, location, email, phone }) => {
         <Avatar
           size="size90"
           name={name}
-           imgProps={{ src: 'profile.jpg' }}  
+          imgProps={{ src: 'profile.jpg' }}
           color="A1"
         />
         <Box direction="vertical" gap="6px">
@@ -28,11 +28,11 @@ const ProfileHeader = ({ name, title, location, email, phone }) => {
                 📍 {location}
               </Badge>
             )}
-           {email && (
-  <Badge size="small" skin="neutralStandard">
-    <span style={{ textTransform: 'none' }}>✉️ {email}</span>
-  </Badge>
-)}
+            {email && (
+              <Badge size="small" skin="neutralStandard">
+                <span style={{ textTransform: 'none' }}>✉️ {email}</span>
+              </Badge>
+            )}
             {phone && (
               <Badge size="small" skin="neutralStandard">
                 📱 {phone}
