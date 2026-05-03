@@ -5,11 +5,10 @@ import {
   Box,
   Divider,
   Badge,
-  TextButton,
 } from '@wix/design-system'
 
 // A single project entry — same visual rhythm as EducationItem / ExperienceItem
-const ProjectItem = ({ name, tech, year, description, link, isLast }) => {
+const ProjectItem = ({ name, tech, year, description, isLast }) => {
   return (
     <Box direction="vertical">
       <Box direction="vertical" gap="8px">
@@ -40,13 +39,6 @@ const ProjectItem = ({ name, tech, year, description, link, isLast }) => {
           <Text size="small" secondary>
             {description}
           </Text>
-        )}
-
-        {/* Optional link — only rendered when a URL is provided */}
-        {link && (
-          <TextButton size="small" as="a" href={link} target="_blank" rel="noopener noreferrer">
-            View Project →
-          </TextButton>
         )}
 
       </Box>
@@ -80,7 +72,6 @@ const ProjectsSection = ({ projects }) => {
               tech={project.tech}
               year={project.year}
               description={project.description}
-              link={project.link}
               isLast={index === projects.length - 1}
             />
           ))}
