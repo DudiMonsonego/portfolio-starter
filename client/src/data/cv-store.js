@@ -67,7 +67,7 @@ const base = {
       tech: ['React', 'Vite', 'Wix Design System', 'Vercel', 'Node.js'],
       year: '2025',
       description: 'Dynamic multi-version portfolio site with per-role CV routing (/cv/:slug), Vercel serverless API, Google Analytics 4, and automated deployment via GitHub. Each CV version is privately shareable with individual recruiters.',
-      link: 'https://portfolio-starter-client.vercel.app',
+      link: 'https://portfolio-david-monsonego.vercel.app',
     },
   ],
 

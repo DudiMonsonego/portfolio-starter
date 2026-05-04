@@ -52,7 +52,7 @@ const baseContent = {
       year: '2025',
       description:
         'Dynamic multi-version portfolio site with per-company/per-role CV routing by UUID, Google Analytics 4, and automated deployment via GitHub. Each CV version is privately shareable with individual recruiters.',
-      link: 'https://portfolio-starter-client.vercel.app',
+      link: 'https://portfolio-david-monsonego.vercel.app',
     },
   ],
 
@@ -329,7 +329,7 @@ export const cvVersions = [
           tech: ['React', 'Vite', 'Wix Design System', 'Vercel', 'Node.js'],
           description:
             'Dynamic resume portfolio with role-specific CV routing, analytics, and automated deployments—useful for sharing tailored versions with recruiters.',
-          link: 'https://portfolio-starter-client.vercel.app',
+          link: 'https://portfolio-david-monsonego.vercel.app',
         },
       ],
     },

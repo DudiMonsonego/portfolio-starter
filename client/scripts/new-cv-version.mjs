@@ -11,7 +11,8 @@ const args = process.argv.slice(2)
 const company = getArgValue(args, '--company') ?? 'Company'
 const role = getArgValue(args, '--role') ?? 'Role'
 let website = getArgValue(args, '--website')
-const baseUrl = getArgValue(args, '--baseUrl') ?? 'http://localhost:5173'
+// Default matches production deployment; override with --baseUrl http://localhost:5173 for local testing.
+const baseUrl = getArgValue(args, '--baseUrl') ?? 'https://portfolio-david-monsonego.vercel.app'
 
 if (website === null) {
   const rl = readline.createInterface({ input: process.stdin, output: process.stdout })
