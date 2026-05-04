@@ -24,10 +24,12 @@ const ContactItem = ({ icon, label, value, href }) => {
   )
 }
 
-const ContactSection = ({ contact }) => {
+const ContactSection = ({ contact, lang }) => {
   if (!contact) {
     return null
   }
+
+  const title = lang === 'he' ? 'יצירת קשר' : 'Contact'
 
   return (
     <Card>
@@ -35,7 +37,7 @@ const ContactSection = ({ contact }) => {
         title={
           <Box gap="6px" verticalAlign="middle">
             <Text size="small">📬</Text>
-            <Heading size="small">Contact</Heading>
+            <Heading size="small">{title}</Heading>
           </Box>
         }
       />

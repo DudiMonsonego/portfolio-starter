@@ -19,14 +19,15 @@ import {
  */
 
 const SkillsSection = (props) => {
-  const { skills } = props
+  const { skills, lang } = props
+  const title = lang === 'he' ? 'כישורים טכניים' : 'Skills'
   return (
     <Card>
       <Card.Header
         title={
           <Box gap="6px" verticalAlign="middle">
             <Text size="small">🛠️</Text>
-            <Heading size="small">Skills</Heading>
+            <Heading size="small">{title}</Heading>
           </Box>
         }
       />

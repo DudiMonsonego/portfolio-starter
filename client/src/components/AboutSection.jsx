@@ -5,14 +5,15 @@ import {
   Box,
 } from '@wix/design-system'
 
-const AboutSection = ({ bio }) => {
+const AboutSection = ({ bio, lang }) => {
+  const title = lang === 'he' ? 'אודות' : 'About Me'
   return (
     <Card>
       <Card.Header
         title={
           <Box gap="6px" verticalAlign="middle">
             <Text size="small">👤</Text>
-            <Heading size="small">About Me</Heading>
+            <Heading size="small">{title}</Heading>
           </Box>
         }
       />

@@ -7,15 +7,27 @@ import {
   Badge,
 } from '@wix/design-system'
 
-const EducationItem = ({ degree, institution, year, description, bullets, isLast }) => {
+const EducationItem = ({ degree, institution, year, description, bullets, isLast, dir }) => {
+  const isRtl = dir === 'rtl'
   return (
     <Box direction="vertical">
       <Box direction="vertical" gap="6px">
         <Box gap="12px" verticalAlign="middle">
-          <Heading size="tiny">{degree}</Heading>
-          <Badge size="tiny" skin="warningLight">
-            {year}
-          </Badge>
+          {isRtl ? (
+            <>
+              <Badge size="tiny" skin="warningLight">
+                {year}
+              </Badge>
+              <Heading size="tiny">{degree}</Heading>
+            </>
+          ) : (
+            <>
+              <Heading size="tiny">{degree}</Heading>
+              <Badge size="tiny" skin="warningLight">
+                {year}
+              </Badge>
+            </>
+          )}
         </Box>
         <Text size="small" weight="bold" skin="primary">
           {institution}
@@ -40,10 +52,11 @@ const EducationItem = ({ degree, institution, year, description, bullets, isLast
   )
 }
 
-const EducationSection = ({ education }) => {
+const EducationSection = ({ education, lang, dir }) => {
   if (!education || education.length === 0) {
     return null
   }
+  const title = lang === 'he' ? 'השכלה' : 'Education'
 
   return (
     <Card>
@@ -51,7 +64,7 @@ const EducationSection = ({ education }) => {
         title={
           <Box gap="6px" verticalAlign="middle">
             <Text size="small">🎓</Text>
-            <Heading size="small">Education</Heading>
+            <Heading size="small">{title}</Heading>
           </Box>
         }
       />
@@ -67,6 +80,7 @@ const EducationSection = ({ education }) => {
               description={edu.description}
               bullets={edu.bullets}
               isLast={index === education.length - 1}
+              dir={dir}
             />
           ))}
         </Box>

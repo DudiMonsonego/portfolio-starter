@@ -66,6 +66,120 @@ const baseContent = {
 // At runtime we index them by id for fast lookup.
 export const cvVersions = [
   {
+    id: '2f66a77f-2dc5-4fb1-8b4a-8f7d5ab2c5a9',
+    slug: 'elad-software-data-engineer-heb',
+    created_at: '2026-05-04T12:00:00.000Z',
+    company_name: 'ELAD software',
+    company_website: 'https://eladsoft.com',
+    role_title: 'Data Engineer',
+    status: 'Draft',
+    content: {
+      ...baseContent,
+      noindex: true,
+      dir: 'rtl',
+      lang: 'he',
+      label: 'ELAD software — Data Engineer (עברית)',
+      name: 'דוד מונסונגו',
+      location: 'ישראל',
+      title: 'מהנדס דאטה',
+      bio:
+        'בוגר תואר ראשון .B.Sc במדעי המחשב בעל רקע טכנולוגי חזק ומומחיות בניהול, עיבוד ומידול נתונים בסביבה ביטחונית דינאמית. בעל ניסיון מוכח בהנדסת צינורות נתונים (Data Pipelines), אינטגרציות API מורכבות ואוטומציה מבוססת Python המייעלת תהליכים ומקצרת זמני עבודה. בעל יכולת מוכחת בגישור בין צרכים עסקיים ותפעוליים לפתרונות טכנולוגיים מתקדמים, חשיבה אנליטית מפותחת ויכולת עבודה תחת לחץ.',
+      contact: {
+        ...baseContent.contact,
+        email: 'dudimonsonego@gmail.com',
+        phone: '0523594646',
+        // "another link" → shows up as Website in the Contact card
+        website: 'https://portfolio-david-monsonego.vercel.app',
+      },
+      education: [
+        {
+          degree: 'קורס ניהול פרויקטים',
+          institution: 'TechTroop, Elevation',
+          year: '2025 – 2026',
+          description: 'הכשרה בתכנון, תקצוב והובלת פרויקטים עם דגש על ויזואליזציה של נתונים.',
+        },
+        {
+          degree: 'תואר ראשון .B.Sc במדעי המחשב',
+          institution: 'אוניברסיטת חיפה',
+          year: '2020 – 2024',
+          description: null,
+        },
+      ],
+      experience: [
+        {
+          title: 'מנהל פרויקטים טכנולוגיים ודאטה (HR ואופרציה)',
+          company: 'שירות מילואים (צה״ל)',
+          year: '2023 – היום',
+          bullets: [
+            'הובלת טרנספורמציה דיגיטלית במערכות כוח האדם של היחידה בסביבה ביטחונית, שהובילה לצמצום של כ־50% בעומס העבודה האדמיניסטרטיבי באמצעות אוטומציה של תהליכי עבודה.',
+            'הנדסת צינורות נתונים (Data Pipelines) ולוחות בקרה אינטראקטיביים (Looker Studio, Google Sheets), ששיפרו משמעותית את מהירות הדיווח, דיוק הנתונים וקבלת ההחלטות עבור הדרג הבכיר.',
+            'פיתוח ותחזוקה של תהליכי עיבוד ומידול נתונים (ETL) באמצעות Python וסקריפטים מותאמים אישית לייעול תהליכי הדיווח בסביבה עתירת לחץ.',
+            'פיתוח אפליקציית Full‑stack לניהול משאבי אנוש באמצעות Cursor (Claude), עם פריסה ב‑Vercel ועבודה מול Supabase לאחסון ומידול נתונים מאובטח בזמן אמת.',
+          ],
+        },
+        {
+          title: 'מנהל סניף',
+          company: 'אייבורי מחשבים',
+          year: '2013 – 2019',
+          bullets: [
+            'ניהול ובקרת תהליכים במערכת Priority ERP: אחריות על אופטימיזציה וייעול תהליכי עבודה מקצה לקצה, תוך ממשק שוטף עם גורמי רכש ותפעול.',
+            'ניהול מלאי ומשאבים: פיקוח על רכיבי עץ מוצר וניהול לוגיסטי במערכת המידע, תוך הבטחת דיוק מרבי ועמידה בלוחות זמנים קשיחים.',
+            'הובלת צוותים למצוינות תפעולית: ניהול ישיר של צוות רב‑תחומי ושיפור שיטות עבודה ממוחשבות.',
+          ],
+        },
+      ],
+      skills: [
+        'Python',
+        'SQL',
+        'JavaScript',
+        'TypeScript',
+        'React',
+        'Java',
+        'C',
+        'Data Modeling & Pipelines',
+        'PostgreSQL',
+        'Looker Studio',
+        'Power BI',
+        'Advanced Excel',
+        'Docker',
+        'Linux (CLI & Shell Scripting)',
+        'AWS (basic)',
+        'VMware (basic)',
+        'GitHub',
+        'API Integration',
+        'Cursor',
+        'Claude Code',
+        'Make',
+        'Airtable',
+        'Google Apps Script',
+        'Agile',
+        'Lean Management',
+        'טרנספורמציה דיגיטלית',
+        'אופטימיזציה של תהליכים',
+      ],
+      languages: [
+        { language: 'עברית', proficiency: 'שפת אם' },
+        { language: 'אנגלית', proficiency: 'רמה גבוהה' },
+      ],
+      projects: [
+        {
+          name: 'מערכת ניהול משאבי אנוש ליחידת מילואים (פנימי)',
+          tech: ['React', 'Supabase', 'PostgreSQL', 'Vercel', 'Looker Studio', 'Cursor / Claude'],
+          description:
+            'אפליקציית Full‑stack לניהול כוח אדם עם אחסון נתונים בזמן אמת, הרשאות מבוססות תפקידים ותהליכי אוטומציה ודיווח שהחליפו עבודה ידנית והפחיתו עומס אדמיניסטרטיבי בכ־50%.',
+          link: null,
+        },
+        {
+          name: 'אתר פורטפוליו / קורות חיים דינמי',
+          tech: ['React', 'Vite', 'Wix Design System', 'Vercel', 'Node.js'],
+          description:
+            'אתר עם גרסאות CV שונות לפי תפקיד/חברה, קישורים לשיתוף מול מגייסים, אנליטיקה ופריסה אוטומטית.',
+          link: 'https://portfolio-david-monsonego.vercel.app',
+        },
+      ],
+    },
+  },
+  {
     id: '54595049-362f-408f-92c5-c35a0704f96c',
     slug: 'amazon-software-dev-dsp',
     created_at: '2026-05-03T15:00:00.000Z',

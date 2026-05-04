@@ -5,10 +5,11 @@ import {
   Box,
 } from '@wix/design-system'
 
-const LanguagesSection = ({ languages }) => {
+const LanguagesSection = ({ languages, lang }) => {
   if (!languages || languages.length === 0) {
     return null
   }
+  const title = lang === 'he' ? 'שפות' : 'Languages'
 
   return (
     <Card>
@@ -16,7 +17,7 @@ const LanguagesSection = ({ languages }) => {
         title={
           <Box gap="6px" verticalAlign="middle">
             <Text size="small">🌐</Text>
-            <Heading size="small">Languages</Heading>
+            <Heading size="small">{title}</Heading>
           </Box>
         }
       />

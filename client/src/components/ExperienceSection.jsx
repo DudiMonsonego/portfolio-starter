@@ -7,15 +7,27 @@ import {
   Badge,
 } from '@wix/design-system'
 
-const ExperienceItem = ({ title, company, year, description, bullets, isLast }) => {
+const ExperienceItem = ({ title, company, year, description, bullets, isLast, dir }) => {
+  const isRtl = dir === 'rtl'
   return (
     <Box direction="vertical">
       <Box direction="vertical" gap="8px">
         <Box gap="12px" verticalAlign="middle">
-          <Heading size="tiny">{title}</Heading>
-          <Badge size="tiny" skin="warningLight">
-            {year}
-          </Badge>
+          {isRtl ? (
+            <>
+              <Badge size="tiny" skin="warningLight">
+                {year}
+              </Badge>
+              <Heading size="tiny">{title}</Heading>
+            </>
+          ) : (
+            <>
+              <Heading size="tiny">{title}</Heading>
+              <Badge size="tiny" skin="warningLight">
+                {year}
+              </Badge>
+            </>
+          )}
         </Box>
         <Text size="small" weight="bold" skin="primary">
           {company}
@@ -40,17 +52,18 @@ const ExperienceItem = ({ title, company, year, description, bullets, isLast }) 
     </Box>
   )
 }
-const ExperienceSection = ({ experience }) => {
+const ExperienceSection = ({ experience, lang, dir }) => {
   if (!experience || experience.length === 0) {
     return null
   }
+  const title = lang === 'he' ? 'ניסיון תעסוקתי' : 'Experience'
   return (
     <Card>
       <Card.Header
         title={
           <Box gap="6px" verticalAlign="middle">
             <Text size="small">💼</Text>
-            <Heading size="small">Experience</Heading>
+            <Heading size="small">{title}</Heading>
           </Box>
         }
       />
@@ -66,6 +79,7 @@ const ExperienceSection = ({ experience }) => {
               description={item.description}
               bullets={item.bullets}
               isLast={index === experience.length - 1}
+              dir={dir}
             />
           ))}
         </Box>

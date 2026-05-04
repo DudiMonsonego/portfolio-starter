@@ -21,10 +21,14 @@ import ProjectsSection from './ProjectsSection'
 const ResumeLayout = ({ resume }) => {
   if (!resume) return null
 
+  const dir = resume?.dir ?? 'ltr'
+  const lang = resume?.lang
+
   return (
     <Page>
       <Page.Content>
         <Box paddingTop="18px" paddingBottom="36px">
+          <div dir={dir} lang={lang}>
           <Layout>
             {/* Profile header spans the full 12-column grid */}
             <Cell span={12}>
@@ -40,22 +44,23 @@ const ResumeLayout = ({ resume }) => {
             {/* Left column — main content (bio, experience, education) */}
             <Cell span={8}>
               <Box direction="vertical" gap="24px">
-                <AboutSection bio={resume.bio} />
-                <ExperienceSection experience={resume.experience} />
-                <EducationSection education={resume.education} />
-                <ProjectsSection projects={resume.projects} />
+                <AboutSection bio={resume.bio} lang={lang} />
+                <ExperienceSection experience={resume.experience} lang={lang} dir={dir} />
+                <EducationSection education={resume.education} lang={lang} dir={dir} />
+                <ProjectsSection projects={resume.projects} lang={lang} />
               </Box>
             </Cell>
 
             {/* Right sidebar — skills, languages, contact */}
             <Cell span={4}>
               <Box direction="vertical" gap="24px">
-                <SkillsSection skills={resume.skills} />
-                <LanguagesSection languages={resume.languages} />
-                <ContactSection contact={resume.contact} />
+                <SkillsSection skills={resume.skills} lang={lang} />
+                <LanguagesSection languages={resume.languages} lang={lang} />
+                <ContactSection contact={resume.contact} lang={lang} />
               </Box>
             </Cell>
           </Layout>
+          </div>
         </Box>
       </Page.Content>
     </Page>
