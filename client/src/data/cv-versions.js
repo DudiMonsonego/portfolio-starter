@@ -66,6 +66,106 @@ const baseContent = {
 // At runtime we index them by id for fast lookup.
 export const cvVersions = [
   {
+    id: '54595049-362f-408f-92c5-c35a0704f96c',
+    slug: 'amazon-software-dev-dsp',
+    created_at: '2026-05-03T15:00:00.000Z',
+    company_name: 'Amazon',
+    company_website: 'https://www.amazon.com',
+    role_title: 'Software Dev',
+    status: 'Sent',
+    content: {
+      ...baseContent,
+      noindex: true,
+      label: 'Amazon — Software Dev',
+      title: 'Software Developer',
+      bio:
+        'B.Sc. in Computer Science graduate with a strong technical foundation in algorithms, data structures, and software engineering. Experienced in developing full-stack applications and automating data-driven workflows using AI-driven tools. A detail-oriented problem-solver with a proven track record of bridging technical execution with business goals in high-pressure environments.',
+      education: [
+        {
+          degree: 'Project Management Course',
+          institution: 'TechTroop / Elevation',
+          year: '2025 – 2026',
+          description: 'Project lifecycle, matrix leadership, and AI-driven data visualization.',
+        },
+        {
+          degree: 'B.Sc. Computer Science',
+          institution: 'University of Haifa',
+          year: '2020 – 2024',
+          bullets: [
+            'Relevant coursework: Data Structures, Algorithms, Object-Oriented Programming, Operating Systems.',
+            'Database Systems, Complexity Analysis.',
+          ],
+        },
+      ],
+      skills: [
+        'Python',
+        'Java',
+        'C',
+        'JavaScript',
+        'TypeScript',
+        'React',
+        'SQL',
+        'Shell scripting',
+        'Cursor',
+        'Claude Code',
+        'Make',
+        'Zapier',
+        'API integration',
+        'Google Apps Script',
+        'Docker',
+        'Linux',
+        'PostgreSQL',
+        'Supabase',
+        'Vercel',
+        'Looker Studio',
+        'Power BI',
+        'Object-oriented design',
+        'Agile',
+        'Lean management',
+        'Digital transformation',
+        'Process optimization',
+      ],
+      experience: [
+        {
+          title: 'Technical Project Manager & Software Developer',
+          company: 'Reserve Duty IDF — Alexandroni Brigade',
+          year: '2023 – Present',
+          bullets: [
+            'Full-stack development: Designed and deployed a custom HR management application using Cursor (Claude Code) and Vercel, with a Supabase (PostgreSQL) backend.',
+            'Process automation: Engineered automated data pipelines that reduced administrative workload by 50% and improved reporting accuracy.',
+            'Data analytics: Developed interactive dashboards using Looker Studio and Google Sheets to support data-driven decision-making for senior command.',
+            'System optimization: Integrated custom scripts and digital tools to streamline processes in a high-pressure environment.',
+          ],
+        },
+        {
+          title: 'Branch Manager',
+          company: 'Ivory Computers',
+          year: '2013 – 2019',
+          bullets: [
+            'Optimized technical workflows and inventory management using Priority ERP, reducing operational errors.',
+            'Managed cross-functional teams to maintain high-quality service standards and meet organizational goals.',
+          ],
+        },
+      ],
+      projects: [
+        {
+          name: 'Interactive CV & portfolio',
+          tech: ['React', 'Vite', 'Wix Design System', 'Tailwind CSS', 'Vercel'],
+          description:
+            'Multi-version resume site with readable per-role links for sharing tailored CVs with recruiters and hiring teams.',
+          link: null,
+        },
+        {
+          name: 'HR management application (internal)',
+          tech: ['React', 'Supabase (PostgreSQL)', 'Vercel', 'Cursor / Claude Code'],
+          description:
+            'Custom internal HR application with automated pipelines and reporting to support operations and leadership.',
+          link: null,
+        },
+      ],
+    },
+  },
+  {
     id: '148af4f0-3845-46be-9970-67c9901aa2cc',
     slug: 'elbit-verification-engineer-ry0',
     created_at: '2026-05-03T12:00:00.000Z',
