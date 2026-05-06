@@ -66,6 +66,81 @@ const baseContent = {
 // At runtime we index them by id for fast lookup.
 export const cvVersions = [
   {
+    id: 'b110c35d-ef93-4e35-8919-1b0713419889',
+    slug: 'elbit-project-manager-7au',
+    created_at: '2026-05-06T11:55:20.763Z',
+    company_name: 'Elbit',
+    company_website: 'https://elbitsystems.com',
+    role_title: 'Project Manager',
+    status: 'Sent',
+    content: {
+      ...baseContent,
+      noindex: true,
+      label: 'Elbit — Project Manager',
+      title: 'Project Manager',
+      bio: 'Results-driven Project Manager with a B.Sc. in Computer Science and extensive experience leading complex, cross-functional technical projects. Proven track record in optimizing operational workflows, managing end-to-end delivery, and leveraging Priority ERP for inventory and process control. Expert in digital transformation and data-driven decision-making within high-pressure defense environments. Strong matrix leadership skills with a focus on OTD (On-Time Delivery) and operational excellence.',
+      contact: {
+        ...baseContent.contact,
+        website: 'https://portfolio-david-monsonego.vercel.app',
+      },
+      education: [
+        {
+          degree: 'TechTroop Project Management Course',
+          institution: 'Elevation',
+          year: '2025 – 2026',
+          description:
+            'Project lifecycle, budget control, matrix leadership, and predictive analytics.',
+        },
+        {
+          degree: 'B.Sc. Computer Science',
+          institution: 'University of Haifa',
+          year: '2020 – 2024',
+          description: null,
+        },
+      ],
+      experience: [
+        {
+          title: 'Technical Project Manager & Software Developer',
+          company: 'IDF Reserve Duty — Alexandroni Brigade',
+          year: '2023 – Present',
+          bullets: [
+            'Project ownership: Led large-scale digital transformation initiatives from requirements characterization to final delivery in a mission-critical environment.',
+            'Operational efficiency: Built automated data pipelines and interactive dashboards (Looker Studio), reducing administrative workload by 50% and improving reporting accuracy.',
+            'Cross-functional leadership: Managed multiple interfaces and stakeholders to deliver objectives under tight schedules and dynamic conditions.',
+            'Risk management: Identified bottlenecks in data flow and system integration, implementing scripts to streamline lead-to-report processes.',
+          ],
+        },
+        {
+          title: 'Branch Manager',
+          company: 'Ivory Computers',
+          year: '2013 – 2019',
+          bullets: [
+            'Operations & supply chain: Managed end-to-end technical workflows and inventory using Priority ERP, ensuring accurate stock levels and reducing operational errors.',
+            'Project delivery: Accountable for order intake through customer delivery, maintaining quality standards and meeting strict KPIs.',
+            'Interface management: Coordinated between procurement, logistics, and technical teams to optimize supply chain processes and resource allocation.',
+            'Process optimization: Applied Lean principles to streamline daily operations and enhance team performance.',
+          ],
+        },
+      ],
+      skills: [
+        'Project Lifecycle Management',
+        'Matrix Leadership',
+        'NPI-to-Serial Transition',
+        'Risk Management',
+        'OTD / OTQ',
+        'Priority ERP',
+        'SQL',
+        'Looker Studio',
+        'Power BI',
+        'Data Analytics',
+        'Workflow Automation (Make, Zapier)',
+        'Python',
+        'Shell Scripting',
+        'AI-driven tools (Cursor, Claude Code)',
+      ],
+    },
+  },
+  {
     id: '2f66a77f-2dc5-4fb1-8b4a-8f7d5ab2c5a9',
     slug: 'elad-software-data-engineer-heb',
     created_at: '2026-05-04T12:00:00.000Z',

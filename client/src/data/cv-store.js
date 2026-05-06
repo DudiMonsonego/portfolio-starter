@@ -252,14 +252,14 @@ export const cvStore = {
 }
 
 // The slug shown when someone visits / or uses an unknown slug
-export const defaultSlug = 'hr-tech'
+export const defaultSlug = 'fullstack-dev'
 
 // Only public versions (noindex: false) appear in the switcher banner
 // Order here controls the order of buttons in the banner
 export const bannerVersions = [
+  { slug: 'fullstack-dev', label: fullstackDev.label },
   { slug: 'hr-tech',       label: hrTech.label },
   { slug: 'technical-pm',  label: technicalPm.label },
-  { slug: 'fullstack-dev', label: fullstackDev.label },
 ]
 
 // ─────────────────────────────────────────────────────────────────────────────
