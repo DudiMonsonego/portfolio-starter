@@ -5,10 +5,17 @@ import {
   Box,
   Divider,
   Badge,
+  TextButton,
 } from '@wix/design-system'
 
+const projectLinkLabel = (link) => {
+  if (!link) return null
+  if (link.includes('github.com')) return 'View on GitHub'
+  return 'View project'
+}
+
 // A single project entry — same visual rhythm as EducationItem / ExperienceItem
-const ProjectItem = ({ name, tech, description, isLast }) => {
+const ProjectItem = ({ name, tech, description, link, isLast }) => {
   return (
     <Box direction="vertical">
       <Box direction="vertical" gap="8px">
@@ -16,6 +23,17 @@ const ProjectItem = ({ name, tech, description, isLast }) => {
         {/* Project name */}
         <Box gap="12px" verticalAlign="middle">
           <Heading size="tiny">{name}</Heading>
+          {link && (
+            <TextButton
+              size="tiny"
+              as="a"
+              href={link}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {projectLinkLabel(link)}
+            </TextButton>
+          )}
         </Box>
 
         {/* Tech stack badges — one per technology */}
@@ -67,6 +85,7 @@ const ProjectsSection = ({ projects, lang }) => {
               name={project.name}
               tech={project.tech}
               description={project.description}
+              link={project.link}
               isLast={index === projects.length - 1}
             />
           ))}

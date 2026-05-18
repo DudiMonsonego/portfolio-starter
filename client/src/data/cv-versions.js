@@ -17,17 +17,28 @@ const baseContent = {
 
   contact: {
     email: 'dudimonsonego@gmail.com',
-    phone: '052-3594646',
+    phone: '052-359-4646',
     linkedin: 'https://linkedin.com/in/david-monsonego',
     github: 'https://github.com/dudimonsonego',
   },
 
   education: [
     {
-      degree: 'Project Management Course',
-      institution: 'TechTroop / Elevation',
-      year: '2025 – Present',
+      degree: 'Wix Jumpstart — Reservists Tech Training',
+      institution: 'Wix & Milumentor',
+      year: '2026',
+      description:
+        'Industry-focused program bridging academic theory and professional R&D workflows. Bi-weekly in-person workshops at Wix Campus (Tel Aviv) covering React, AI agent workflows (LangChain / Claude API), API integration, Python automation, CI/CD, and mock technical interviews.',
+      link: 'https://www.wixjumpstart.com/',
+      linkLabel: 'Program website',
+    },
+    {
+      degree: 'TechTroop Project Management Course',
+      institution: 'Elevation',
+      year: '2025 – 2026',
       description: 'Project lifecycle, matrix leadership, and AI-driven data visualization.',
+      link: 'https://drive.google.com/file/d/1BRLMW1d3u1Xvfb9W2A_1Xl8xbRFdOyra/view',
+      linkLabel: 'Course page',
     },
     {
       degree: 'B.Sc. Computer Science',
@@ -39,32 +50,202 @@ const baseContent = {
 
   projects: [
     {
+      name: 'AssetFlow',
+      tech: ['Next.js', 'TypeScript', 'Supabase', 'Tailwind CSS', 'Vercel'],
+      year: '2026',
+      description:
+        'Full-stack B2B SaaS for hardware lifecycle management — multi-tenant architecture with PostgreSQL Row Level Security, asset CRUD, warranty monitoring, automated cron jobs, and AI-powered category suggestions.',
+      link: 'https://github.com/DudiMonsonego/AssetFlow',
+    },
+    {
       name: 'IDF Unit HR Management System',
       tech: ['React', 'Supabase', 'Looker Studio', 'Cursor / Claude Code'],
       year: '2023 – Present',
       description:
         'Full-stack personnel management application built for a reserve-duty IDF unit. Features real-time data storage, role-based access, and automated reporting dashboards that replaced a fully manual process and reduced administrative workload by 50%.',
-      link: null,
+      link: 'https://github.com/DudiMonsonego/Battalion_Managment_System',
     },
     {
       name: 'Resume Portfolio Website',
       tech: ['React', 'Vite', 'Wix Design System', 'Vercel', 'Node.js'],
       year: '2025',
       description:
-        'Dynamic multi-version portfolio site with per-company/per-role CV routing by UUID, Google Analytics 4, and automated deployment via GitHub. Each CV version is privately shareable with individual recruiters.',
-      link: 'https://portfolio-david-monsonego.vercel.app',
+        'Dynamic multi-version portfolio site with per-role CV routing, Google Analytics 4, and automated deployment via GitHub. Each CV version is privately shareable with individual recruiters.',
+      link: 'https://github.com/DudiMonsonego/portfolio-starter',
     },
   ],
 
   languages: [
-    { language: 'English', proficiency: 'Full professional proficiency' },
-    { language: 'Hebrew', proficiency: 'Native / bilingual proficiency' },
+    { language: 'English', proficiency: 'High proficiency' },
+    { language: 'Hebrew', proficiency: 'Native proficiency' },
   ],
 }
 
 // Versions are stored in a flat array to make JSON-like editing easy.
 // At runtime we index them by id for fast lookup.
 export const cvVersions = [
+  {
+    id: 'a1b2c3d4-e5f6-7890-abcd-ef1234567890',
+    slug: 'general',
+    created_at: '2026-05-17T00:00:00.000Z',
+    company_name: 'General',
+    company_website: '',
+    role_title: 'General CV',
+    status: 'Active',
+    content: {
+      ...baseContent,
+      noindex: false,
+      label: 'General CV',
+      title: 'Technical Project Manager & Software Developer',
+      bio:
+        'Results-driven B.Sc. Computer Science and Project Management graduate with a strong technical background and a data-driven approach to solving complex operational challenges. Proven track record in leading digital transformation initiatives, optimizing cross-functional workflows, and deploying full-stack and AI-driven automation solutions. Adept at bridging the gap between technical development and business goals to deliver high-impact results in high-pressure environments.',
+      skills: [
+        'Python',
+        'JavaScript',
+        'TypeScript',
+        'React',
+        'Java',
+        'C',
+        'SQL',
+        'Looker Studio',
+        'Power BI',
+        'Advanced Excel',
+        'Cursor',
+        'Claude Code',
+        'Make',
+        'Zapier',
+        'API Integration',
+        'Airtable',
+        'Google Apps Script',
+        'Docker',
+        'Linux & Windows (CLI & Shell Scripting)',
+        'Priority ERP',
+        'GitHub',
+        'AWS (familiarity)',
+        'VMware (familiarity)',
+        'Project Management',
+        'Agile / Scrum',
+        'Lean Management',
+        'Digital Transformation',
+        'Process Optimization',
+      ],
+      experience: [
+        {
+          title: 'Technical Project Manager (Operations & HR)',
+          company: 'IDF Reserve Duty — Alexandroni Brigade',
+          year: '2023 – Present',
+          bullets: [
+            'Led a large-scale digital transformation of unit personnel management systems, cutting administrative workload by 50% through workflow automation.',
+            'Developed and deployed a full-stack HR application using React and Vercel, integrated with a Supabase (PostgreSQL) backend and engineered utilizing advanced AI development environments (Cursor / Claude Code).',
+            'Engineered automated data pipelines and interactive dashboards using Looker Studio and Google Sheets, significantly accelerating reporting speed and data accuracy for senior leadership decision-making.',
+            'Optimized operational efficiency by embedding custom scripts and digital tools, enhancing cross-team collaboration and streamlining end-to-end reporting processes in a high-pressure environment.',
+          ],
+        },
+        {
+          title: 'Branch Manager',
+          company: 'Ivory Computers',
+          year: '2013 – 2019',
+          bullets: [
+            'Managed end-to-end branch operations and workflow optimization using Priority ERP, driving organizational efficiency and cost-effective resource management.',
+            'Onboarded and mentored new employees across all regional branches, establishing standardized training practices and ensuring operational alignment with corporate procedures.',
+            'Streamlined inventory tracking and resource allocation (BOM) within the enterprise system, ensuring high data accuracy and minimizing operational errors.',
+            'Led and mentored a cross-functional team, fostering operational excellence, improving service delivery standards, and consistently achieving organizational targets.',
+          ],
+        },
+      ],
+    },
+  },
+  {
+    id: 'f3a8b2c1-4d5e-6f70-8192-a3b4c5d6e7f8',
+    slug: 'ge-healthcare-pmo-release-manager-p8n',
+    created_at: '2026-05-17T12:00:00.000Z',
+    company_name: 'GE HealthCare',
+    company_website: 'https://www.gehealthcare.com',
+    role_title: 'PMO/Release Manager',
+    status: 'Sent',
+    content: {
+      ...baseContent,
+      noindex: true,
+      label: 'GE HealthCare — PMO/Release Manager',
+      title: 'PMO / Release Manager',
+      bio:
+        'Certified Project Manager and Computer Science graduate (B.Sc.) with a strong background in digital transformation, operations management, and resource optimization. Proven track record in leading cross-functional processes, managing plan-vs-actual tracking, and utilizing data-driven methodologies to improve organizational efficiency. Possesses deep technical orientation combined with exceptional interpersonal skills, leadership capabilities, and experience with advanced automated and AI-driven workflows. Highly qualified to bridge the gap between engineering challenges and structured project control.',
+      education: [
+        {
+          degree: 'Wix Jumpstart — Reservists Tech Training',
+          institution: 'Wix & Milumentor',
+          year: '2026',
+          description:
+            'Industry-focused program bridging academic theory and professional R&D workflows. Bi-weekly in-person workshops at Wix Campus (Tel Aviv) covering React, AI agent workflows (LangChain / Claude API), API integration, Python automation, CI/CD, and mock technical interviews.',
+          link: 'https://www.wixjumpstart.com/',
+          linkLabel: 'Program website',
+        },
+        {
+          degree: 'TechTroop Project Management Course',
+          institution: 'Elevation',
+          year: '2025 – 2026',
+          description: null,
+          link: 'https://drive.google.com/file/d/1BRLMW1d3u1Xvfb9W2A_1Xl8xbRFdOyra/view',
+          linkLabel: 'Course page',
+        },
+        {
+          degree: 'B.Sc. Computer Science',
+          institution: 'University of Haifa',
+          year: '2020 – 2024',
+          description: null,
+        },
+      ],
+      skills: [
+        'Plan-vs-Actual Tracking',
+        'Resource Allocation',
+        'Capacity Planning',
+        'KPI & Dashboard Development',
+        'Risk Management',
+        'Change Control',
+        'Project Management',
+        'Digital Transformation',
+        'JavaScript',
+        'React',
+        'SQL',
+        'Supabase',
+        'HTML / CSS',
+        'Excel',
+        'Jira',
+        'Monday',
+        'Git',
+        'Airtable',
+        'Make',
+        'Cursor',
+        'Claude Code',
+        'Matrix Management',
+        'Cross-functional Collaboration',
+        'Stakeholder Communication',
+      ],
+      experience: [
+        {
+          title: 'Technical Project Manager (Operations & HR)',
+          company: 'IDF Reserve Duty — Alexandroni Brigade',
+          year: '2023 – Present',
+          bullets: [
+            'Led a large-scale brigade-wide digital transformation, optimizing resource allocation and personnel management systems.',
+            'Managed plan-vs-actual tracking for digital implementation workflows, identifying dependencies, schedule deviations, and capacity bottlenecks.',
+            'Conducted system-level analysis and requirement characterization to align field operations with technological capabilities.',
+            'Defined core tracking methodologies and coordinated with technical stakeholders, ensuring transparency and data-driven decision-making.',
+          ],
+        },
+        {
+          title: 'Branch Manager',
+          company: 'Ivory Computers',
+          year: '2013 – 2019',
+          bullets: [
+            'Directed all daily operations, resource utilization, and capacity planning for a high-volume branch.',
+            'Monitored and analyzed cross-functional team performance, workloads, and efficiency trends to drive continuous operational improvements.',
+            'Developed and monitored branch KPIs, establishing dashboards to present actionable insights and progress reports to executive leadership.',
+          ],
+        },
+      ],
+    },
+  },
   {
     id: 'b110c35d-ef93-4e35-8919-1b0713419889',
     slug: 'elbit-project-manager-7au',

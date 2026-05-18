@@ -5,9 +5,10 @@ import {
   Box,
   Divider,
   Badge,
+  TextButton,
 } from '@wix/design-system'
 
-const EducationItem = ({ degree, institution, year, description, bullets, isLast, dir }) => {
+const EducationItem = ({ degree, institution, year, description, link, linkLabel, bullets, isLast, dir }) => {
   const isRtl = dir === 'rtl'
   return (
     <Box direction="vertical">
@@ -29,9 +30,22 @@ const EducationItem = ({ degree, institution, year, description, bullets, isLast
             </>
           )}
         </Box>
-        <Text size="small" weight="bold" skin="primary">
-          {institution}
-        </Text>
+        <Box gap="8px" verticalAlign="middle" wrap="wrap">
+          <Text size="small" weight="bold" skin="primary">
+            {institution}
+          </Text>
+          {link && (
+            <TextButton
+              size="tiny"
+              as="a"
+              href={link}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {linkLabel ?? 'View program'}
+            </TextButton>
+          )}
+        </Box>
         {bullets && bullets.length > 0 && (
           <Box direction="vertical" gap="4px">
             {bullets.map((line, i) => (
@@ -78,6 +92,8 @@ const EducationSection = ({ education, lang, dir }) => {
               institution={edu.institution}
               year={edu.year}
               description={edu.description}
+              link={edu.link}
+              linkLabel={edu.linkLabel}
               bullets={edu.bullets}
               isLast={index === education.length - 1}
               dir={dir}

@@ -31,17 +31,28 @@ const base = {
 
   contact: {
     email: 'dudimonsonego@gmail.com',
-    phone: '052-3594646',
+    phone: '052-359-4646',
     linkedin: 'https://linkedin.com/in/david-monsonego',
     github: 'https://github.com/dudimonsonego',
   },
 
   education: [
     {
-      degree: 'Project Management Course',
-      institution: 'TechTroop / Elevation',
-      year: '2025 – Present',
+      degree: 'Wix Jumpstart — Reservists Tech Training',
+      institution: 'Wix & Milumentor',
+      year: '2026',
+      description:
+        'Industry-focused program bridging academic theory and professional R&D workflows. Bi-weekly in-person workshops at Wix Campus (Tel Aviv) covering React, AI agent workflows, API integration, Python automation, CI/CD, and mock technical interviews.',
+      link: 'https://www.wixjumpstart.com/',
+      linkLabel: 'Program website',
+    },
+    {
+      degree: 'TechTroop Project Management Course',
+      institution: 'Elevation',
+      year: '2025 – 2026',
       description: 'Project lifecycle, matrix leadership, and AI-driven data visualization.',
+      link: 'https://drive.google.com/file/d/1BRLMW1d3u1Xvfb9W2A_1Xl8xbRFdOyra/view',
+      linkLabel: 'Course page',
     },
     {
       degree: 'B.Sc. Computer Science',
@@ -56,24 +67,31 @@ const base = {
   // different projects for a particular role.
   projects: [
     {
+      name: 'AssetFlow',
+      tech: ['Next.js', 'TypeScript', 'Supabase', 'Tailwind CSS', 'Vercel'],
+      year: '2026',
+      description: 'Full-stack B2B SaaS for hardware lifecycle management with multi-tenant PostgreSQL RLS, asset tracking, warranty monitoring, and AI-powered features.',
+      link: 'https://github.com/DudiMonsonego/AssetFlow',
+    },
+    {
       name: 'IDF Unit HR Management System',
       tech: ['React', 'Supabase', 'Looker Studio', 'Cursor / Claude Code'],
       year: '2023 – Present',
       description: 'Full-stack personnel management application built for a reserve-duty IDF unit. Features real-time data storage, role-based access, and automated reporting dashboards that replaced a fully manual process and reduced administrative workload by 50%.',
-      link: null,
+      link: 'https://github.com/DudiMonsonego/Battalion_Managment_System',
     },
     {
       name: 'Resume Portfolio Website',
       tech: ['React', 'Vite', 'Wix Design System', 'Vercel', 'Node.js'],
       year: '2025',
-      description: 'Dynamic multi-version portfolio site with per-role CV routing (/cv/:slug), Vercel serverless API, Google Analytics 4, and automated deployment via GitHub. Each CV version is privately shareable with individual recruiters.',
-      link: 'https://portfolio-david-monsonego.vercel.app',
+      description: 'Dynamic multi-version portfolio site with per-role CV routing (/cv/:slug), Vercel serverless API, Google Analytics 4, and automated deployment via GitHub.',
+      link: 'https://github.com/DudiMonsonego/portfolio-starter',
     },
   ],
 
   languages: [
-    { language: 'English', proficiency: 'Full professional proficiency' },
-    { language: 'Hebrew',  proficiency: 'Native / bilingual proficiency' },
+    { language: 'English', proficiency: 'High proficiency' },
+    { language: 'Hebrew',  proficiency: 'Native proficiency' },
   ],
 }
 
