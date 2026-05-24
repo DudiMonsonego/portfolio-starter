@@ -247,6 +247,107 @@ export const cvVersions = [
     },
   },
   {
+    id: 'c7e8f9a0-1b2c-4d5e-8f90-a1b2c3d4e5f6',
+    slug: 'amarel-account-manager-k2m',
+    created_at: '2026-05-17T16:00:00.000Z',
+    company_name: 'Amarel',
+    company_website: 'https://www.amarel.net',
+    role_title: 'Account Manager',
+    status: 'Sent',
+    content: {
+      ...baseContent,
+      noindex: true,
+      label: 'Amarel — Account Manager',
+      title: 'Account Manager',
+      bio:
+        'Project and account manager with a B.Sc. in Computer Science and project management training (TechTroop/Elevation). Proven in end-to-end operational and business project delivery, matrix management, and ongoing B2B client relationships from initial requirements through fulfillment. Experienced handling orders, system implementations, upgrades, training, and reporting under strict deadlines in military and commercial environments. Strong professional English for international stakeholders.',
+      education: [
+        {
+          degree: 'Wix Jumpstart — Reservists Tech Training',
+          institution: 'Wix & Milumentor',
+          year: '2026',
+          description: null,
+          link: 'https://www.wixjumpstart.com/',
+          linkLabel: 'Program website',
+        },
+        {
+          degree: 'TechTroop Project Management Course',
+          institution: 'Elevation',
+          year: '2025 – 2026',
+          description: null,
+          link: 'https://drive.google.com/file/d/1BRLMW1d3u1Xvfb9W2A_1Xl8xbRFdOyra/view',
+          linkLabel: 'Course page',
+        },
+        {
+          degree: 'B.Sc. Computer Science',
+          institution: 'University of Haifa',
+          year: '2020 – 2024',
+          description: null,
+        },
+      ],
+      skills: [
+        'Management & Methodologies: End-to-End Project Management, Account Management (B2B), Matrix Management, Cross-Functional Collaboration, Operational Execution, Client Training',
+        'Data & Analytics: SQL, Looker Studio, Power BI, Advanced Excel, Data Pipelines',
+        'Systems & Automation: Priority ERP, API Integrations, Make, Zapier, Linux / Windows Systems, Custom Scripting',
+      ],
+      experience: [
+        {
+          title: 'Technical Project Manager (Operations & HR)',
+          company: 'IDF Reserve Duty',
+          year: '2023 – Present',
+          bullets: [
+            'End-to-end project management: Led unit-wide personnel-system transformation; defined requirements, coordinated delivery, and cut administrative workload by ~50% through process automation.',
+            'Matrix management: Worked with senior command, cross-functional teams, and field stakeholders to align priorities and streamline lead-to-report workflows.',
+            'Operational execution: Managed reporting pipelines and control dashboards (Looker Studio, Google Sheets), improving speed and accuracy for decision-making under tight deadlines.',
+            'Implementation & training: Rolled out system upgrades and digital tools; trained users and supported ongoing operations in a high-pressure environment.',
+          ],
+        },
+        {
+          title: 'Branch & Account Manager',
+          company: 'Ivory Computers',
+          year: '2013 – 2019',
+          bullets: [
+            'Account management: Managed ongoing B2B relationships with commercial clients and dealers as single point of contact from sale through order fulfillment and issue resolution.',
+            'Operational delivery: Owned orders, inventory (BOM), logistics, and supply-chain coordination in Priority ERP; maintained stock accuracy and on-time execution.',
+            'Cross-functional coordination: Partnered with procurement, operations, and technical teams to resolve discrepancies, improve workflows, and meet organizational schedules.',
+          ],
+        },
+      ],
+      projects: [
+        {
+          name: 'AssetFlow',
+          tech: ['Next.js', 'TypeScript', 'Supabase', 'PostgreSQL', 'Tailwind CSS', 'Vercel'],
+          year: '2026',
+          description:
+            'End-to-end B2B SaaS for organizational hardware lifecycle management — from procurement through maintenance to retirement. Built a multi-tenant platform with PostgreSQL Row Level Security, role-based access, asset tracking, warranty monitoring, automated cron jobs, and webhook integrations. Includes a public live demo with sandboxed tenant data for recruiters and stakeholders.',
+          link: 'https://github.com/DudiMonsonego/AssetFlow',
+          liveLink: 'https://my-assetflow.vercel.app/',
+        },
+        {
+          name: 'IDF Unit HR Management System',
+          tech: ['React', 'Supabase', 'PostgreSQL', 'Vercel', 'Looker Studio', 'Cursor / Claude Code'],
+          year: '2023 – Present',
+          description:
+            'Led requirements gathering and delivery of a full-stack personnel management application for a reserve-duty IDF unit. Replaced manual HR workflows with real-time data storage, role-based permissions, and automated reporting dashboards — cutting administrative workload by ~50%. Coordinated rollout, user training, and ongoing support in a high-pressure operational environment.',
+          link: 'https://github.com/DudiMonsonego/Battalion_Managment_System',
+        },
+        {
+          name: 'Resume Portfolio Website',
+          tech: ['React', 'Vite', 'Wix Design System', 'Vercel', 'Node.js'],
+          year: '2025',
+          description:
+            'Dynamic multi-version portfolio site with per-role CV routing, private shareable links for recruiters, Google Analytics 4, and automated deployment via GitHub. Demonstrates full project ownership from design through implementation, content management, and production release.',
+          link: 'https://github.com/DudiMonsonego/portfolio-starter',
+          liveLink: 'https://portfolio-david-monsonego.vercel.app/',
+        },
+      ],
+      languages: [
+        { language: 'English', proficiency: 'High proficiency (verbal & written)' },
+        { language: 'Hebrew', proficiency: 'Native proficiency' },
+      ],
+    },
+  },
+  {
     id: '8c4d2e1f-9a3b-4c5d-8e7f-6a5b4c3d2e1f',
     slug: 'rambam-systems-analyst-heb-r7k',
     created_at: '2026-05-17T14:00:00.000Z',

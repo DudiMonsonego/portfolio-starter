@@ -15,7 +15,7 @@ const projectLinkLabel = (link) => {
 }
 
 // A single project entry — same visual rhythm as EducationItem / ExperienceItem
-const ProjectItem = ({ name, tech, description, link, liveLink, isLast }) => {
+const ProjectItem = ({ name, tech, year, description, link, liveLink, isLast }) => {
   return (
     <Box direction="vertical">
       <Box direction="vertical" gap="8px">
@@ -23,6 +23,11 @@ const ProjectItem = ({ name, tech, description, link, liveLink, isLast }) => {
         {/* Project name */}
         <Box gap="12px" verticalAlign="middle" wrap="wrap">
           <Heading size="tiny">{name}</Heading>
+          {year && (
+            <Badge size="tiny" skin="warningLight">
+              {year}
+            </Badge>
+          )}
           {link && (
             <TextButton
               size="tiny"
@@ -100,6 +105,7 @@ const ProjectsSection = ({ projects, lang }) => {
               key={index}
               name={project.name}
               tech={project.tech}
+              year={project.year}
               description={project.description}
               link={project.link}
               liveLink={project.liveLink}
