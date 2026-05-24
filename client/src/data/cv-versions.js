@@ -772,14 +772,13 @@ export const cvVersions = [
       label: 'Iscar — Software Engineer',
       title: 'Software Engineer',
       bio:
-        'B.Sc. Computer Science graduate and certified Project Manager with a solid technical foundation and practical experience in enterprise ERP workflows. Offers a unique combination of academic software engineering training and practical business-systems analysis, gained through managing logistics and inventory processes. Proven capability in writing SQL queries, developing web-based utilities using JavaScript, and creating automated data pipelines to solve operational problems. A highly motivated, quick learner with high professional English proficiency, well-suited for cross-functional collaboration in global information systems teams.',
+        'B.Sc. Computer Science graduate with hands-on experience building internal web tools (JavaScript, TypeScript, React, PostgreSQL) and automating operational workflows. Strong background in Priority ERP, inventory/logistics processes, and systems analysis. Experienced working with technical and business stakeholders; fluent professional English for international teams.',
       education: [
         {
           degree: 'Wix Jumpstart — Reservists Tech Training',
           institution: 'Wix & Milumentor',
           year: '2026',
-          description:
-            'Industry-focused program bridging academic theory and professional R&D workflows. Bi-weekly in-person workshops at Wix Campus (Tel Aviv) covering React, AI agent workflows (LangChain / Claude API), API integration, Python automation, CI/CD, and mock technical interviews.',
+          description: null,
           link: 'https://www.wixjumpstart.com/',
           linkLabel: 'Program website',
         },
@@ -803,9 +802,8 @@ export const cvVersions = [
         'TypeScript',
         'Python',
         'Java',
-        'C',
-        'SQL (PostgreSQL)',
-        'Priority ERP',
+        'SQL',
+        'Priority ERP workflow processes',
         'Systems Analysis',
         'System Implementation',
         'Technical Troubleshooting',
@@ -816,7 +814,6 @@ export const cvVersions = [
         'API Integration',
         'Make',
         'Zapier',
-        'React',
         'GitHub',
         'Docker',
         'Linux',
@@ -826,14 +823,12 @@ export const cvVersions = [
       experience: [
         {
           title: 'Technical Project Manager & Information Systems Developer',
-          company: 'IDF Reserve Duty — Alexandroni Brigade',
+          company: 'IDF Reserve Duty',
           year: '2023 – Present',
           bullets: [
-            'Analyzed internal unit processes and developed a custom web application to automate resource management, successfully reducing administrative workloads by 50%.',
-            'Programmed system logic and user interfaces using JavaScript, TypeScript, and React, deploying the tools into active operational use.',
-            'Designed and optimized database tables using Supabase (PostgreSQL), writing functional SQL queries to ensure accurate data tracking and retrieval.',
-            'Constructed automated reporting pipelines using Google Sheets and Looker Studio, speeding up data distribution for senior command decision-making.',
-            'Utilized AI development tools (Cursor, Claude Code) to rapidly learn new scripting environments and maintain organized code documentation.',
+            'Analyzed internal processes and built a custom web application for resource management, reducing administrative workloads by ~50%.',
+            'Developed system logic and UI with JavaScript, TypeScript, and React. Designed PostgreSQL (Supabase) tables and SQL queries for accurate data tracking.',
+            'Built automated reporting pipelines with Google Sheets and Looker Studio. Used AI dev tools (Cursor, Claude Code) to ship faster and maintain documentation.',
           ],
         },
         {
@@ -842,10 +837,30 @@ export const cvVersions = [
           year: '2013 – 2019',
           bullets: [
             'Managed daily branch technical workflows, procurement interfaces, and live stock movements directly within Priority ERP.',
-            'Conducted functional analysis of inventory gaps, coordinating with corporate IT and Logistics departments to troubleshoot software discrepancies and optimize store supply chains.',
-            'Generated and evaluated daily analytical data reports, cross-referencing system database inputs to ensure absolute data integrity and eliminate operational errors.',
-            'Trained and supervised team members on proper enterprise system usage, data entry standards, and technical customer support protocols.',
+            'Conducted inventory analysis with IT and logistics teams, produced daily reports and cross-checked database inputs to ensure data integrity and reduce errors.',
           ],
+        },
+      ],
+      projects: [
+        {
+          name: 'AssetFlow',
+          tech: ['Next.js', 'TypeScript', 'Supabase'],
+          description: 'B2B hardware lifecycle SaaS.',
+          link: 'https://github.com/DudiMonsonego/AssetFlow',
+          liveLink: 'https://my-assetflow.vercel.app/',
+        },
+        {
+          name: 'IDF HR System',
+          tech: ['React', 'PostgreSQL'],
+          description: 'Full-stack personnel app.',
+          link: 'https://github.com/DudiMonsonego/Battalion_Managment_System',
+        },
+        {
+          name: 'Portfolio',
+          tech: ['React', 'Vite'],
+          description: 'Multi-version CV site.',
+          link: 'https://github.com/DudiMonsonego/portfolio-starter',
+          liveLink: 'https://portfolio-david-monsonego.vercel.app/',
         },
       ],
     },
