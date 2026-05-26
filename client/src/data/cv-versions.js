@@ -267,6 +267,15 @@ export const cvVersions = [
       ],
       projects: [
         {
+          name: 'AssetFlow',
+          tech: ['Next.js', 'TypeScript', 'Supabase', 'PostgreSQL', 'Tailwind CSS', 'Vercel'],
+          year: '2026',
+          description:
+            'Full-stack B2B SaaS for hardware lifecycle management — multi-tenant PostgreSQL with Row Level Security, asset tracking, warranty monitoring, and automated cron jobs.',
+          link: 'https://github.com/DudiMonsonego/AssetFlow',
+          liveLink: 'https://my-assetflow.vercel.app/',
+        },
+        {
           name: 'IDF HR System',
           tech: ['React', 'PostgreSQL', 'Supabase', 'Looker Studio'],
           year: '2023 – Present',
