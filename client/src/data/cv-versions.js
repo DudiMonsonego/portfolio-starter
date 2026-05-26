@@ -221,6 +221,99 @@ export const cvVersions = [
     },
   },
   {
+    id: 'e8f1a2b3-c4d5-6789-abcd-ef0123456789',
+    slug: 'fastsimon-application-engineer-fs9',
+    created_at: '2026-05-26T12:00:00.000Z',
+    company_name: 'Fast Simon',
+    company_website: 'https://www.fastsimon.com',
+    role_title: 'Application Engineer',
+    status: 'Sent',
+    content: {
+      ...baseContent,
+      noindex: true,
+      label: 'Fast Simon — Application Engineer',
+      title: 'Application Engineer',
+      bio:
+        'Computer Science graduate (B.Sc.) and certified Project Manager with a strong technical background and hands-on experience in web development and automation. Fast learner and independent problem solver with a proven track record of managing technical operations, fixing system bottlenecks, and handling customer-facing environments. Experienced in working with JavaScript, TypeScript, and React to build practical, real-world tools.',
+      contact: {
+        ...baseContent.contact,
+        website: 'https://portfolio-david-monsonego.vercel.app',
+      },
+      education: [
+        {
+          degree: 'Wix Jumpstart — Reservists Tech Training',
+          institution: 'Wix & Milumentor',
+          year: '2026',
+          description:
+            'Intensive training in modern software methodologies and scalable architecture.',
+          link: 'https://www.wixjumpstart.com/',
+          linkLabel: 'Program website',
+        },
+        {
+          degree: 'TechTroop Project Management Course',
+          institution: 'Elevation',
+          year: '2025 – 2026',
+          description:
+            'Project lifecycle, matrix leadership, budget control, and predictive analytics.',
+          link: 'https://drive.google.com/file/d/1BRLMW1d3u1Xvfb9W2A_1Xl8xbRFdOyra/view',
+          linkLabel: 'Course page',
+        },
+        {
+          degree: 'B.Sc. Computer Science',
+          institution: 'University of Haifa',
+          year: '2020 – 2024',
+          description: null,
+        },
+      ],
+      projects: [
+        {
+          name: 'IDF HR System',
+          tech: ['React', 'PostgreSQL', 'Supabase', 'Looker Studio'],
+          year: '2023 – Present',
+          description: 'Full-stack personnel management application for a reserve-duty IDF unit.',
+          link: 'https://github.com/DudiMonsonego/Battalion_Managment_System',
+        },
+        {
+          name: 'Portfolio',
+          tech: ['React', 'Vite', 'Wix Design System', 'Vercel'],
+          year: '2025',
+          description: 'Multi-version CV site with per-role routing and private recruiter links.',
+          link: 'https://github.com/DudiMonsonego/portfolio-starter',
+          liveLink: 'https://portfolio-david-monsonego.vercel.app/',
+        },
+      ],
+      skills: [
+        'Frontend: JavaScript, TypeScript, React, HTML, CSS',
+        'Databases & Analytics: SQL, Supabase (PostgreSQL), Looker Studio, Power BI, Excel',
+        'Automation & Tools: Cursor, Claude Code, Make, Zapier, API Integration, GitHub',
+        'Systems & Ops: Docker, Linux, Windows, Priority ERP',
+      ],
+      experience: [
+        {
+          title: 'Technical Project Manager (HR & Ops)',
+          company: 'IDF Reserve Duty',
+          year: '2023 – Present',
+          bullets: [
+            'Built a full-stack web application from scratch using React, TypeScript, and Supabase (PostgreSQL) to manage unit data.',
+            'Cut administrative workload by 50% by designing and implementing automated workflows and custom scripts.',
+            'Created automated data pipelines and interactive Looker Studio dashboards to fix reporting delays and ensure data accuracy.',
+            'Handled real-time technical issues and troubleshooting under pressure, adapting quickly to changing operational needs.',
+          ],
+        },
+        {
+          title: 'Branch & Account Manager',
+          company: 'Ivory Computers',
+          year: '2013 – 2019',
+          bullets: [
+            'Managed daily technical operations and inventory using Priority ERP, reducing system errors and improving team efficiency.',
+            'Solved complex technical and service issues for customers daily, maintaining high service standards.',
+            'Led and trained a local team, with a focus on improving technical workflows and software adoption.',
+          ],
+        },
+      ],
+    },
+  },
+  {
     id: 'f3a8b2c1-4d5e-6f70-8192-a3b4c5d6e7f8',
     slug: 'ge-healthcare-pmo-release-manager-p8n',
     created_at: '2026-05-17T12:00:00.000Z',
@@ -1148,6 +1241,7 @@ export const cvVersionsBySlug = Object.fromEntries(cvVersions.map((v) => [v.slug
 // Friendly shortcuts → canonical slug (avoids "invalid link" from missing random suffix)
 const slugAliases = {
   'elbit-technical-manager': 'elbit-technical-manager-tm0',
+  'fastsimon-application-engineer': 'fastsimon-application-engineer-fs9',
 }
 
 function normalizeSlug(slug) {
