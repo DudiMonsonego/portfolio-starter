@@ -346,7 +346,7 @@ export const cvVersions = [
           degree: 'Wix Jumpstart — Reservists Tech Training',
           institution: 'Wix & Milumentor',
           year: '2026',
-          description: null,
+          description: 'Intensive training in modern software methodologies and scalable architecture.',
           link: 'https://www.wixjumpstart.com/',
           linkLabel: 'Program website',
         },
@@ -354,7 +354,7 @@ export const cvVersions = [
           degree: 'TechTroop Project Management Course',
           institution: 'Elevation',
           year: '2025 – 2026',
-          description: null,
+          description: 'Project lifecycle, matrix leadership, budget control, and predictive analytics.',
           link: 'https://drive.google.com/file/d/1BRLMW1d3u1Xvfb9W2A_1Xl8xbRFdOyra/view',
           linkLabel: 'Course page',
         },
@@ -381,6 +381,15 @@ export const cvVersions = [
             'Full-stack B2B SaaS for hardware lifecycle management — multi-tenant PostgreSQL with Row Level Security, asset tracking, warranty monitoring, and automated cron jobs.',
           link: 'https://github.com/DudiMonsonego/AssetFlow',
           liveLink: 'https://my-assetflow.vercel.app/',
+        },
+        {
+          name: 'Resume Portfolio Website',
+          tech: ['React', 'Vite', 'Wix Design System', 'Vercel'],
+          year: '2025',
+          description:
+            'Multi-version CV site with per-role routing and private shareable CV links (/cv/:slug). Includes a serverless API and automated deployments.',
+          link: 'https://github.com/DudiMonsonego/portfolio-starter',
+          liveLink: 'https://portfolio-david-monsonego.vercel.app/',
         },
       ],
       skills: [
