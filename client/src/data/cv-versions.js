@@ -1145,6 +1145,15 @@ export const cvVersions = [
 export const cvVersionsById = Object.fromEntries(cvVersions.map((v) => [v.id, v]))
 export const cvVersionsBySlug = Object.fromEntries(cvVersions.map((v) => [v.slug, v]))
 
+// Friendly shortcuts → canonical slug (avoids "invalid link" from missing random suffix)
+const slugAliases = {
+  'elbit-technical-manager': 'elbit-technical-manager-tm0',
+}
+
+function normalizeSlug(slug) {
+  return String(slug).trim().toLowerCase().replace(/\/+$/, '')
+}
+
 export function getCvVersionById(id) {
   if (!id) return null
   return cvVersionsById[id] ?? null
@@ -1152,6 +1161,8 @@ export function getCvVersionById(id) {
 
 export function getCvVersionBySlug(slug) {
   if (!slug) return null
-  return cvVersionsBySlug[slug] ?? null
+  const normalized = normalizeSlug(slug)
+  const resolved = slugAliases[normalized] ?? normalized
+  return cvVersionsBySlug[resolved] ?? null
 }
 

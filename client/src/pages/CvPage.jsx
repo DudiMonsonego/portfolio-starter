@@ -17,7 +17,7 @@ const CvPage = () => {
   const version = getCvVersionBySlug(slug)
   const cv = version?.content
 
-  if (!cv) return <CvNotFound />
+  if (!cv) return <CvNotFound slug={slug} />
 
   return <CvPageContent slug={slug} cv={cv} />
 }
@@ -53,7 +53,7 @@ const CvPageContent = ({ _slug, cv }) => {
   return <ResumeLayout resume={cv} />
 }
 
-const CvNotFound = () => {
+const CvNotFound = ({ slug }) => {
   useEffect(() => {
     let meta = document.querySelector('meta[name="robots"]')
     if (!meta) {
@@ -74,8 +74,18 @@ const CvNotFound = () => {
   return (
     <div style={{ padding: 40, fontFamily: 'system-ui, -apple-system, Segoe UI, Roboto, sans-serif' }}>
       <h2 style={{ marginTop: 0 }}>This CV link is invalid or expired.</h2>
-      <p style={{ marginBottom: 0 }}>
+      <p style={{ marginBottom: 16 }}>
         Please ask the sender for an updated link.
+        {slug ? (
+          <>
+            {' '}
+            (path: <code>/cv/{slug}</code>)
+          </>
+        ) : null}
+      </p>
+      <p style={{ marginBottom: 0, fontSize: 14, color: '#555' }}>
+        General CV:{' '}
+        <a href="/cv/general">/cv/general</a>
       </p>
     </div>
   )
