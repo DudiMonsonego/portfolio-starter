@@ -323,6 +323,99 @@ export const cvVersions = [
     },
   },
   {
+    id: 'a9b3c7d1-e2f4-5678-90ab-cdef12345678',
+    slug: 'checkpoint-rd-operations-cp9',
+    created_at: '2026-05-26T14:00:00.000Z',
+    company_name: 'Check Point',
+    company_website: 'https://www.checkpoint.com',
+    role_title: 'R&D Operations',
+    status: 'Sent',
+    content: {
+      ...baseContent,
+      noindex: true,
+      label: 'Check Point — R&D Operations',
+      title: 'R&D Operations Specialist',
+      bio:
+        'B.Sc. Computer Science graduate and certified Project Manager with a strong technical background and hands-on experience in operations, automation, and tech problem-solving. Experienced in building and monitoring data pipelines, automating workflows, and fixing issues in live environments. Skilled at working under pressure, managing multiple tasks, and collaborating with different teams to get things done. Looking to bring a proactive, "can-do" approach to the R&D Operations Specialist role.',
+      contact: {
+        ...baseContent.contact,
+        website: 'https://portfolio-david-monsonego.vercel.app',
+      },
+      education: [
+        {
+          degree: 'Wix Jumpstart — Reservists Tech Training',
+          institution: 'Wix & Milumentor',
+          year: '2026',
+          description: null,
+          link: 'https://www.wixjumpstart.com/',
+          linkLabel: 'Program website',
+        },
+        {
+          degree: 'TechTroop Project Management Course',
+          institution: 'Elevation',
+          year: '2025 – 2026',
+          description: null,
+          link: 'https://drive.google.com/file/d/1BRLMW1d3u1Xvfb9W2A_1Xl8xbRFdOyra/view',
+          linkLabel: 'Course page',
+        },
+        {
+          degree: 'B.Sc. Computer Science',
+          institution: 'University of Haifa',
+          year: '2020 – 2024',
+          description: null,
+        },
+      ],
+      projects: [
+        {
+          name: 'IDF HR System',
+          tech: ['React', 'PostgreSQL', 'Supabase', 'Looker Studio'],
+          year: '2023 – Present',
+          description: 'Full-stack personnel management application for a reserve-duty IDF unit.',
+          link: 'https://github.com/DudiMonsonego/Battalion_Managment_System',
+        },
+        {
+          name: 'AssetFlow',
+          tech: ['Next.js', 'TypeScript', 'Supabase', 'PostgreSQL', 'Tailwind CSS', 'Vercel'],
+          year: '2026',
+          description:
+            'Full-stack B2B SaaS for hardware lifecycle management — multi-tenant PostgreSQL with Row Level Security, asset tracking, warranty monitoring, and automated cron jobs.',
+          link: 'https://github.com/DudiMonsonego/AssetFlow',
+          liveLink: 'https://my-assetflow.vercel.app/',
+        },
+      ],
+      skills: [
+        'Programming & Scripting: Python, JavaScript, TypeScript, React, Java, C',
+        'Automation & AI Tools: Cursor, Claude Code, Make, Zapier, API Integration, Airtable, Google Apps Script',
+        'Data & Analytics: SQL, Data Pipelines, Looker, Power BI, Advanced Excel',
+        'Infrastructure & Operations: Docker, Linux & Windows (CLI & Shell Scripting), GitHub, Priority ERP, familiarity with AWS & VMware',
+        'Methodologies: Operations, Troubleshooting, Process Optimization, Project Management',
+      ],
+      experience: [
+        {
+          title: 'Technical Project Manager & Developer',
+          company: 'IDF Reserve Duty',
+          year: '2023 – Present',
+          bullets: [
+            'Built and deployed a full-stack HR and operations app using Cursor (Claude Code) with a Supabase (PostgreSQL) backend, hosted on Vercel.',
+            'Created automated data pipelines and interactive dashboards (Looker Studio, Google Sheets) that made data tracking and reporting much faster and more accurate.',
+            'Cut administrative workload by 50% across the unit by automating complex, manual workflows and integrating modern digital tools.',
+            'Monitored systems and solved technical problems in a high-pressure environment, making sure daily operations ran smoothly without interruptions.',
+            'Worked closely with cross-functional teams and command ranks to align technical solutions with operational goals.',
+          ],
+        },
+        {
+          title: 'Branch Manager & Account Manager',
+          company: 'Ivory Computers',
+          year: '2013 – 2019',
+          bullets: [
+            'Managed daily branch operations, technical workflows, and key client accounts, focusing on troubleshooting real-time issues, service quality, and efficiency.',
+            'Optimized logistics and inventory workflows using Priority ERP, minimizing data errors and ensuring accurate stock alignment.',
+          ],
+        },
+      ],
+    },
+  },
+  {
     id: 'f3a8b2c1-4d5e-6f70-8192-a3b4c5d6e7f8',
     slug: 'ge-healthcare-pmo-release-manager-p8n',
     created_at: '2026-05-17T12:00:00.000Z',
@@ -1251,6 +1344,7 @@ export const cvVersionsBySlug = Object.fromEntries(cvVersions.map((v) => [v.slug
 const slugAliases = {
   'elbit-technical-manager': 'elbit-technical-manager-tm0',
   'fastsimon-application-engineer': 'fastsimon-application-engineer-fs9',
+  'checkpoint-rd-operations': 'checkpoint-rd-operations-cp9',
 }
 
 function normalizeSlug(slug) {
