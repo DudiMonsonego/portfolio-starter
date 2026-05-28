@@ -425,6 +425,117 @@ export const cvVersions = [
     },
   },
   {
+    id: 'c2d7a1f4-83e4-4a1c-9b6d-1b2c3d4e5f60',
+    slug: 'sap-project-manager-sp9',
+    created_at: '2026-05-28T11:30:00.000Z',
+    company_name: 'SAP',
+    company_website: 'https://www.sap.com',
+    role_title: 'Project Manager',
+    status: 'Sent',
+    content: {
+      ...baseContent,
+      noindex: true,
+      label: 'SAP — Project Manager',
+      title: 'Project Manager',
+      bio:
+        'Results-oriented Project Management graduate with a B.Sc. in Computer Science, blending technical proficiency with data-driven operational control. Proven track record in leading cross-functional digital transformations, optimizing workflows, and managing multi-party stakeholder communication. Proficient in Agile methodologies, budgeting, and analytics tools including Advanced Excel and Power BI. Passionate about leveraging emerging AI solutions to drive operational excellence and long-term customer success as a trusted advisor.',
+      contact: {
+        ...baseContent.contact,
+        website: 'https://portfolio-david-monsonego.vercel.app',
+      },
+      education: [
+        {
+          degree: 'Wix Jumpstart — Reservists Tech Training',
+          institution: 'Wix & Milumentor',
+          year: '2026',
+          description: null,
+          link: 'https://www.wixjumpstart.com/',
+          linkLabel: 'Program website',
+        },
+        {
+          degree: 'TechTroop Project Management Course',
+          institution: 'Elevation',
+          year: '2025 – 2026',
+          description: null,
+          link: 'https://drive.google.com/file/d/1BRLMW1d3u1Xvfb9W2A_1Xl8xbRFdOyra/view',
+          linkLabel: 'Course page',
+        },
+        {
+          degree: 'B.Sc. Computer Science',
+          institution: 'University of Haifa',
+          year: '2020 – 2024',
+          description: null,
+        },
+      ],
+      projects: [
+        {
+          name: 'Text-to-SQL RAG Agent',
+          tech: ['Python', 'LangChain (LCEL)', 'Google Gemini', 'SQLite', 'SQLAlchemy', 'pandas', 'Streamlit', 'pytest'],
+          year: '2026',
+          description:
+            'A production-style, local, and cost-free natural-language interface for querying CSV-backed data. Upload a dataset, ask questions in plain English, and receive agentic reasoning, generated SQL, and a grounded natural-language answer. Implements read-only SQL guardrails, schema grounding, few-shot prompting, and Pydantic-validated structured outputs (thought, sql_query, answer).',
+          link: 'https://github.com/DudiMonsonego/SQL_Agent',
+          liveLink: null,
+        },
+        {
+          name: 'IDF HR System',
+          tech: ['React', 'PostgreSQL', 'Supabase', 'Looker Studio'],
+          year: '2023 – Present',
+          description: 'Full-stack personnel management application for a reserve-duty IDF unit.',
+          link: 'https://github.com/DudiMonsonego/Battalion_Managment_System',
+        },
+        {
+          name: 'AssetFlow',
+          tech: ['Next.js', 'TypeScript', 'Supabase', 'PostgreSQL', 'Tailwind CSS', 'Vercel'],
+          year: '2026',
+          description: 'Full-stack B2B SaaS for hardware lifecycle management.',
+          link: 'https://github.com/DudiMonsonego/AssetFlow',
+          liveLink: 'https://my-assetflow.vercel.app/',
+        },
+        {
+          name: 'Resume Portfolio Website',
+          tech: ['React', 'Vite', 'Wix Design System', 'Vercel'],
+          year: '2025',
+          description:
+            'Multi-version CV site with per-role routing and private shareable CV links (/cv/:slug).',
+          link: 'https://github.com/DudiMonsonego/portfolio-starter',
+          liveLink: 'https://portfolio-david-monsonego.vercel.app/',
+        },
+      ],
+      skills: [
+        'Management & Methodologies: Project Management, Agile, Risk Management, Budget/Resource Allocation, Process Optimization, Digital Transformation',
+        'Data & Analytics: Advanced Excel, SQL, Looker Studio, Power BI, Data-Driven Reporting',
+        'Automation & Emerging Tech: Artificial Intelligence (AI), Cursor, Claude Code, Make, Zapier, API Integration, Google Apps Script',
+        'Programming & Infrastructure: Python, JavaScript, TypeScript, React, Java, C, Docker, GitHub, Priority ERP',
+      ],
+      experience: [
+        {
+          title: 'Technical Project Manager & Developer',
+          company: 'IDF Reserve Duty',
+          year: '2023 – Present',
+          bullets: [
+            'Led a large-scale digital transformation of unit personnel systems, acting as a trusted coordinator across multi-party delivery teams to cut administrative workload by 50% through process automation (Make, Zapier) and workflow optimization.',
+            'Oversaw sub-projects from initiation to closure, managing backlogs and milestones by engineering real-time data pipelines (Google Sheets, Looker Studio) to deliver clear, data-driven status updates to senior command.',
+            'Developed and deployed a custom full-stack management application using Cursor/Claude Code on Vercel with a Supabase (PostgreSQL) backend to secure real-time data tracking and mitigate operational risks under tight schedules.',
+          ],
+        },
+        {
+          title: 'Branch Manager & Account Manager',
+          company: 'Ivory Computers',
+          year: '2013 – 2019',
+          bullets: [
+            'Coordinated cross-functional activities across procurement, logistics, and supply chain departments using Priority ERP to optimize budget implementation, track bills of materials (BOM), and ensure accurate operational delivery.',
+            'Led, supervised, and mentored multi-disciplinary teams to sustain high-quality service standards, driving operational consistency and securing excellent client acceptance in alignment with corporate goals.',
+          ],
+        },
+      ],
+      languages: [
+        { language: 'English', proficiency: 'High proficiency' },
+        { language: 'Hebrew', proficiency: 'Native proficiency' },
+      ],
+    },
+  },
+  {
     id: 'f3a8b2c1-4d5e-6f70-8192-a3b4c5d6e7f8',
     slug: 'ge-healthcare-pmo-release-manager-p8n',
     created_at: '2026-05-17T12:00:00.000Z',
@@ -1354,6 +1465,7 @@ const slugAliases = {
   'elbit-technical-manager': 'elbit-technical-manager-tm0',
   'fastsimon-application-engineer': 'fastsimon-application-engineer-fs9',
   'checkpoint-rd-operations': 'checkpoint-rd-operations-cp9',
+  'sap-project-manager': 'sap-project-manager-sp9',
 }
 
 function normalizeSlug(slug) {
