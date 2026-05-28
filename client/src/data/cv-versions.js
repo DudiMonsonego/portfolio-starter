@@ -640,6 +640,124 @@ export const cvVersions = [
     },
   },
   {
+    id: 'b4e8c2a1-7f3d-4b9e-8c2a-1d4f6a8b0c2e',
+    slug: 'rambam-ai-developer-rb9',
+    created_at: '2026-05-28T15:00:00.000Z',
+    company_name: 'Rambam',
+    company_website: 'https://www.rambam.org.il',
+    role_title: 'AI Developer',
+    status: 'Sent',
+    content: {
+      ...baseContent,
+      noindex: true,
+      label: 'Rambam — AI Developer',
+      title: 'AI Developer',
+      bio:
+        'B.Sc. in Computer Science and Project Management graduate, leveraging a strong technical foundation and a data-driven mindset. Hands-on experience in optimizing workflows through AI-driven automation and no-code solutions. A detail-oriented problem-solver with a proven track record in managing complex projects, budgets, and technical operations. Skilled in bridging the gap between technical execution and business goals, with a focus on digital transformation. Seeking to contribute expertise in technical project management, data analysis, or software development.',
+      contact: {
+        ...baseContent.contact,
+        website: 'https://portfolio-david-monsonego.vercel.app',
+      },
+      education: [
+        {
+          degree: 'Wix Jumpstart — Reservists Tech Training',
+          institution: 'Wix & Milumentor',
+          year: '2026',
+          description:
+            'Industry-focused program bridging academic theory and professional R&D workflows. Bi-weekly in-person workshops at Wix Campus (Tel Aviv) covering React, AI agent workflows (LangChain / Claude API), API integration, Python automation, CI/CD, and mock technical interviews.',
+          link: 'https://www.wixjumpstart.com/',
+          linkLabel: 'Program website',
+        },
+        {
+          degree: 'TechTroop Project Management Course',
+          institution: 'Elevation',
+          year: '2025 – Present',
+          description:
+            'Comprehensive training in the project lifecycle, from planning and budgeting to matrix leadership, with a focus on AI-driven data visualization and predictive analytics for optimized project control.',
+          link: 'https://drive.google.com/file/d/1BRLMW1d3u1Xvfb9W2A_1Xl8xbRFdOyra/view',
+          linkLabel: 'Course page',
+        },
+        {
+          degree: 'B.Sc. Computer Science',
+          institution: 'University of Haifa',
+          year: '2020 – 2024',
+          description: null,
+        },
+      ],
+      projects: [
+        {
+          name: 'IDF HR System',
+          tech: ['React', 'PostgreSQL', 'Supabase', 'Looker Studio', 'Cursor / Claude Code'],
+          year: '2023 – Present',
+          description:
+            'Full-stack HR management application built with Cursor (Claude Code), deployed on Vercel with a Supabase (PostgreSQL) backend for secure, real-time data storage.',
+          link: 'https://github.com/DudiMonsonego/Battalion_Managment_System',
+        },
+        {
+          name: 'Text-to-SQL RAG Agent',
+          tech: ['Python', 'LangChain (LCEL)', 'Google Gemini', 'SQLite', 'SQLAlchemy', 'pandas', 'Streamlit', 'pytest'],
+          year: '2026',
+          description:
+            'A production-style, local, and cost-free natural-language interface for querying CSV-backed data. Upload a dataset, ask questions in plain English, and receive agentic reasoning, generated SQL, and a grounded natural-language answer. Implements read-only SQL guardrails, schema grounding, few-shot prompting, and Pydantic-validated structured outputs (thought, sql_query, answer).',
+          link: 'https://github.com/DudiMonsonego/SQL_Agent',
+          liveLink: null,
+        },
+        {
+          name: 'AssetFlow',
+          tech: ['Next.js', 'TypeScript', 'Supabase', 'PostgreSQL', 'Tailwind CSS', 'Vercel'],
+          year: '2026',
+          description:
+            'Full-stack B2B SaaS for hardware lifecycle management — multi-tenant PostgreSQL with Row Level Security, asset tracking, warranty monitoring, and automated cron jobs.',
+          link: 'https://github.com/DudiMonsonego/AssetFlow',
+          liveLink: 'https://my-assetflow.vercel.app/',
+        },
+        {
+          name: 'Resume Portfolio Website',
+          tech: ['React', 'Vite', 'Wix Design System', 'Vercel'],
+          year: '2025',
+          description:
+            'Multi-version CV site with per-role routing and private shareable CV links (/cv/:slug).',
+          link: 'https://github.com/DudiMonsonego/portfolio-starter',
+          liveLink: 'https://portfolio-david-monsonego.vercel.app/',
+        },
+      ],
+      skills: [
+        'Programming: Python, JavaScript, TypeScript, React, Java, C',
+        'Data & Analytics: SQL, Looker Studio, Power BI, Advanced Excel',
+        'Automation & AI Tools: Cursor, Claude Code, Make, Zapier, API Integration, Airtable, Google Apps Script',
+        'Infrastructure & Ops: Docker, Linux & Windows (CLI & Shell Scripting), Priority ERP, GitHub, familiarity with AWS & VMware',
+        'Methodologies & Management: Project Management, Agile, Lean Management, Digital Transformation, Process Optimization',
+      ],
+      experience: [
+        {
+          title: 'HR and Operations Technical Project Manager',
+          company: 'IDF Reserve Duty',
+          year: '2023 – Present',
+          bullets: [
+            'Led a large-scale digital transformation of unit personnel systems, cutting administrative workload by 50% through workflow automation and custom-built tools.',
+            'Developed a full-stack HR management application using Cursor (Claude Code), deployed on Vercel, with a Supabase (PostgreSQL) backend for secure, real-time data storage.',
+            'Engineered automated data pipelines and interactive dashboards using Google Sheets and Looker Studio, significantly improving reporting speed, data accuracy, and decision-making for senior command.',
+            'Optimized operational efficiency by integrating digital tools and custom scripts, enhancing team coordination and streamlining lead-to-report processes in a high-pressure environment.',
+          ],
+        },
+        {
+          title: 'Branch Manager',
+          company: 'Ivory Computers',
+          year: '2013 – 2019',
+          bullets: [
+            'Optimized technical operations and daily workflows using Priority ERP, significantly improving overall process efficiency.',
+            'Streamlined sales processes and inventory management via Priority ERP, reducing operational errors and ensuring accurate stock levels.',
+            'Supervised team performance to maintain high-quality service standards and operational consistency.',
+          ],
+        },
+      ],
+      languages: [
+        { language: 'English', proficiency: 'Full professional proficiency' },
+        { language: 'Hebrew', proficiency: 'Native/bilingual proficiency' },
+      ],
+    },
+  },
+  {
     id: 'f3a8b2c1-4d5e-6f70-8192-a3b4c5d6e7f8',
     slug: 'ge-healthcare-pmo-release-manager-p8n',
     created_at: '2026-05-17T12:00:00.000Z',
@@ -1571,6 +1689,7 @@ const slugAliases = {
   'checkpoint-rd-operations': 'checkpoint-rd-operations-cp9',
   'sap-project-manager': 'sap-project-manager-sp9',
   'microsoft-software-quality-engineering': 'microsoft-software-quality-engineering-ms9',
+  'rambam-ai-developer': 'rambam-ai-developer-rb9',
 }
 
 function normalizeSlug(slug) {
