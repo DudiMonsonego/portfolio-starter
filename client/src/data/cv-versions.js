@@ -536,6 +536,110 @@ export const cvVersions = [
     },
   },
   {
+    id: '9a2c7b14-6b4c-4a90-b3f5-2d0e7b4a1c9e',
+    slug: 'microsoft-software-quality-engineering-ms9',
+    created_at: '2026-05-28T12:00:00.000Z',
+    company_name: 'Microsoft',
+    company_website: 'https://www.microsoft.com',
+    role_title: 'Software Quality Engineering',
+    status: 'Sent',
+    content: {
+      ...baseContent,
+      noindex: true,
+      label: 'Microsoft — Software Quality Engineering',
+      title: 'Software Quality Engineering',
+      bio:
+        'Proficient Computer Science B.Sc. graduate and Project Management specialist with a strong technical foundation in full-stack development, distributed data architectures, and intelligent test automation. Experienced in designing end-to-end cloud-native applications, engineering robust data pipelines, and implementing automated testing frameworks to validate complex integration scenarios. Proven track record of driving digital transformation by embedding automated validation, API testing, and telemetry-driven scripts into mission-critical operations. Skilled in isolating root causes in high-pressure environments, collaborating across engineering layers, and delivering reliable, data-first solutions.',
+      contact: {
+        ...baseContent.contact,
+        website: 'https://portfolio-david-monsonego.vercel.app',
+      },
+      education: [
+        {
+          degree: 'Wix Jumpstart — Reservists Tech Training',
+          institution: 'Wix & Milumentor',
+          year: '2026',
+          description: null,
+          link: 'https://www.wixjumpstart.com/',
+          linkLabel: 'Program website',
+        },
+        {
+          degree: 'TechTroop Project Management Course',
+          institution: 'Elevation',
+          year: '2025 – 2026',
+          description: null,
+          link: 'https://drive.google.com/file/d/1BRLMW1d3u1Xvfb9W2A_1Xl8xbRFdOyra/view',
+          linkLabel: 'Course page',
+        },
+        {
+          degree: 'B.Sc. Computer Science',
+          institution: 'University of Haifa',
+          year: '2020 – 2024',
+          description: null,
+        },
+      ],
+      projects: [
+        {
+          name: 'IDF HR System',
+          tech: ['React', 'PostgreSQL', 'Supabase', 'Looker Studio'],
+          year: '2023 – Present',
+          description: 'Full-stack personnel management application for a reserve-duty IDF unit.',
+          link: 'https://github.com/DudiMonsonego/Battalion_Managment_System',
+        },
+        {
+          name: 'AssetFlow',
+          tech: ['Next.js', 'TypeScript', 'Supabase', 'PostgreSQL', 'Tailwind CSS', 'Vercel'],
+          year: '2026',
+          description: 'Full-stack B2B SaaS for hardware lifecycle management.',
+          link: 'https://github.com/DudiMonsonego/AssetFlow',
+          liveLink: 'https://my-assetflow.vercel.app/',
+        },
+        {
+          name: 'Text-to-SQL RAG Agent',
+          tech: ['Python', 'LangChain (LCEL)', 'Google Gemini', 'SQLite', 'SQLAlchemy', 'pandas', 'Streamlit', 'pytest'],
+          year: '2026',
+          description:
+            'Local natural-language interface for querying CSV-backed data (CSV → SQLite). Exposes thought → SQL → answer with read-only SQL validation and structured outputs.',
+          link: 'https://github.com/DudiMonsonego/SQL_Agent',
+          liveLink: null,
+        },
+      ],
+      skills: [
+        'Programming & Test Automation: Python (PyTest), JavaScript, TypeScript, React, Java, C, Google Apps Script',
+        'Data & Analytics Platform: SQL, PostgreSQL, Power BI, Looker Studio, Advanced Excel',
+        'Infrastructure, Cloud & Ops: Docker, GitHub, Vercel, Supabase, Linux & Windows (CLI & Shell Scripting), familiarity with AWS',
+        'Automation, Integration & Testing: Postman (API Testing), Cursor, Claude Code, API Integration, Make, Airtable',
+        'Methodologies: Distributed Systems Validation, End-to-End Testing Integration, Root Cause Analysis, Agile',
+      ],
+      experience: [
+        {
+          title: 'Technical Project Manager & Developer',
+          company: 'IDF Reserve Duty',
+          year: '2023 – Present',
+          bullets: [
+            'Designed and implemented a scalable, full-stack personnel management application using Cursor (Claude Code), deployed via Vercel with a Supabase (PostgreSQL) cloud backend for real-time, secure data validation.',
+            'Engineered automated data pipelines, validation models, and integration workflows using Postman for API testing and custom scripts, cutting administrative and operational workload by 50%.',
+            'Architected and monitored automated testing logic using PyTest and custom CLI/Shell configurations to isolate distributed system issues, ensure cross-workload interoperability, and achieve 100% data reporting accuracy.',
+            'Partnered closely with technical units and operational stakeholders to embed reliability and performance tracking early in the lifecycle (Shift-Left), enabling faster, more confident system deployment under high-pressure conditions.',
+          ],
+        },
+        {
+          title: 'Branch & Technical Operations Manager',
+          company: 'Ivory Computers',
+          year: '2013 – 2019',
+          bullets: [
+            'Optimized technical operations and end-to-end workflows utilizing Priority ERP, executing systematic root-cause analysis on inventory and configuration errors to ensure full system consistency.',
+            'Supervised cross-functional team performance and aligned business requirements with technical execution, minimizing operational risk and driving high-quality service standards.',
+          ],
+        },
+      ],
+      languages: [
+        { language: 'English', proficiency: 'High proficiency' },
+        { language: 'Hebrew', proficiency: 'Native proficiency' },
+      ],
+    },
+  },
+  {
     id: 'f3a8b2c1-4d5e-6f70-8192-a3b4c5d6e7f8',
     slug: 'ge-healthcare-pmo-release-manager-p8n',
     created_at: '2026-05-17T12:00:00.000Z',
@@ -1466,6 +1570,7 @@ const slugAliases = {
   'fastsimon-application-engineer': 'fastsimon-application-engineer-fs9',
   'checkpoint-rd-operations': 'checkpoint-rd-operations-cp9',
   'sap-project-manager': 'sap-project-manager-sp9',
+  'microsoft-software-quality-engineering': 'microsoft-software-quality-engineering-ms9',
 }
 
 function normalizeSlug(slug) {
