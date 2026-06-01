@@ -85,6 +85,89 @@ const baseContent = {
 // At runtime we index them by id for fast lookup.
 export const cvVersions = [
   {
+    id: 'd4e8f1a2-6c3b-4d9e-9f0a-1b2c3d4e5f6a',
+    slug: 'abra-ai-adoption-specialist-a7k',
+    created_at: '2026-06-01T00:00:00.000Z',
+    company_name: 'Abra',
+    company_website: 'https://www.abra-it.com',
+    role_title: 'AI Adoption Specialist',
+    status: 'Sent',
+    content: {
+      ...baseContent,
+      noindex: true,
+      label: 'Abra — AI Adoption Specialist',
+      title: 'AI Adoption Specialist',
+      bio:
+        'Technological Project Manager and B.Sc. Computer Science graduate with hands-on expertise driving digital transformation and organizational AI adoption. Proven at bridging complex technology and business workflows—building prompt libraries, secure data pipelines, and automated workflows that cut operational load while meeting strict data-privacy requirements. A service-oriented instructor who trains diverse audiences (from frontline staff to senior leadership), champions daily use of AI dev tools (Cursor, Claude Code), and translates field needs into measurable value—aligned with helping enterprises implement tailored AI solutions at scale.',
+      contact: {
+        ...baseContent.contact,
+        website: 'https://portfolio-david-monsonego.vercel.app',
+      },
+      projects: [
+        {
+          name: 'IDF HR System',
+          tech: ['React', 'PostgreSQL', 'Supabase', 'Looker Studio', 'Cursor / Claude Code'],
+          year: '2023 – Present',
+          description:
+            'Full-stack personnel management application for a reserve-duty unit—secure data storage, role-based access, and automated reporting dashboards that replaced manual HR workflows and reduced administrative workload by 50%.',
+          link: 'https://github.com/DudiMonsonego/Battalion_Managment_System',
+        },
+        {
+          name: 'Text-to-SQL RAG Agent',
+          tech: ['Python', 'LangChain (LCEL)', 'Google Gemini', 'SQLite', 'SQLAlchemy', 'pandas', 'Streamlit', 'pytest'],
+          year: '2026',
+          description:
+            'A production-style, local natural-language interface for querying CSV-backed data. Upload a dataset, ask questions in plain English, and receive agentic reasoning, generated SQL, and a grounded natural-language answer—with read-only SQL guardrails, schema grounding, few-shot prompting, and Pydantic-validated structured outputs.',
+          link: 'https://github.com/DudiMonsonego/SQL_Agent',
+          liveLink: null,
+        },
+        {
+          name: 'AssetFlow',
+          tech: ['Next.js', 'TypeScript', 'Supabase', 'PostgreSQL', 'Tailwind CSS', 'Vercel'],
+          year: '2026',
+          description:
+            'Full-stack B2B SaaS for hardware lifecycle management—multi-tenant architecture with PostgreSQL Row Level Security, asset tracking, warranty monitoring, and AI-powered category suggestions.',
+          link: 'https://github.com/DudiMonsonego/AssetFlow',
+          liveLink: 'https://my-assetflow.vercel.app/',
+        },
+      ],
+      skills: [
+        'AI & Automation: Advanced Prompt Engineering, ChatGPT, Claude, Gemini, Cursor, Claude Code, Make, Zapier, API Integration, Airtable, Google Apps Script',
+        'Data & Analytics: SQL, Looker Studio, Power BI, Advanced Excel, Supabase, Data Privacy & Sensitivity',
+        'Frameworks & Systems: Priority ERP, Workflow Optimization, Knowledge Management, System Implementation, Technical Training & Instruction',
+        'Programming: Python, JavaScript, TypeScript, React, Java, C, GitHub',
+      ],
+      experience: [
+        {
+          title: 'Technical Project Manager & Developer',
+          company: 'IDF Reserve Duty',
+          year: '2023 – Present',
+          bullets: [
+            'Led large-scale digital transformation and secure implementation of unit information systems, cutting administrative workload by 50% through AI-driven automation.',
+            'Championed daily adoption of advanced AI development tools (Cursor, Claude Code) and productivity workflows, optimizing cross-team coordination in a high-pressure environment.',
+            'Engineered secure data pipelines and automated workflows using Supabase, Google Sheets, and Looker Studio, maintaining strict compliance with information security and sensitive personnel data protocols.',
+            'Served as the focal point for technological implementation across the unit—mentoring commanders and training staff on digital tools while simplifying complex data for senior command decision-making.',
+          ],
+        },
+        {
+          title: 'Branch & Technical Operations Manager',
+          company: 'Ivory Computers',
+          year: '2013 – 2019',
+          bullets: [
+            'Managed daily technical operations and personnel workflows utilizing Priority ERP, optimizing supply chain, inventory control, and operational accuracy.',
+            'Supervised, coached, and guided a multi-disciplinary team, establishing high-quality service standards, patience-driven customer success, and clear technical instruction.',
+            'Translated complex hardware and software specifications into simple, tailored solutions for specific client and business needs.',
+            'Evaluated and deployed internal technical tool upgrades, mitigating operational risks and driving user adoption across the branch.',
+          ],
+        },
+      ],
+      languages: [
+        { language: 'English', proficiency: 'Full professional proficiency' },
+        { language: 'Hebrew', proficiency: 'Native proficiency' },
+      ],
+    },
+  },
+  {
     id: 'a1b2c3d4-e5f6-7890-abcd-ef1234567890',
     slug: 'general',
     created_at: '2026-05-17T00:00:00.000Z',
@@ -1690,6 +1773,7 @@ const slugAliases = {
   'sap-project-manager': 'sap-project-manager-sp9',
   'microsoft-software-quality-engineering': 'microsoft-software-quality-engineering-ms9',
   'rambam-ai-developer': 'rambam-ai-developer-rb9',
+  'abra-ai-adoption-specialist': 'abra-ai-adoption-specialist-a7k',
 }
 
 function normalizeSlug(slug) {
