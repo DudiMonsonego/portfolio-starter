@@ -264,6 +264,101 @@ export const cvVersions = [
     },
   },
   {
+    id: 'c3f8a2b1-9e4d-4c7a-b6f0-8d1e2a3b4c5d',
+    slug: 'willot-field-operations-lead-w9l',
+    created_at: '2026-06-04T00:00:00.000Z',
+    company_name: 'Willot',
+    company_website: 'https://www.wiliot.com',
+    role_title: 'Field Operations Lead',
+    status: 'Sent',
+    content: {
+      ...baseContent,
+      noindex: true,
+      label: 'Willot — Field Operations Lead',
+      title: 'Field Operations Lead',
+      bio:
+        'A Technical Project Manager and B.Sc. Computer Science graduate with hands-on experience in daily operations, process optimization, and digital tools implementation. Skilled in coordinating cross-functional workflows, training teams on new systems, and maintaining project schedules in dynamic environments. Leverages a strong background in technical retail management and inventory logistics to ensure smooth execution, data accuracy, and reliable customer delivery.',
+      contact: {
+        ...baseContent.contact,
+        website: 'https://portfolio-david-monsonego.vercel.app',
+      },
+      education: [
+        {
+          degree: 'Wix Jumpstart — Reservists Tech Training',
+          institution: 'Wix & Milumentor',
+          year: '2026',
+          description:
+            'Intensive training in modern software methodologies and scalable architecture.',
+          link: 'https://www.wixjumpstart.com/',
+          linkLabel: 'Program website',
+        },
+        {
+          degree: 'TechTroop Project Management Course',
+          institution: 'Elevation',
+          year: '2025 – 2026',
+          description: null,
+          link: 'https://drive.google.com/file/d/1BRLMW1d3u1Xvfb9W2A_1Xl8xbRFdOyra/view',
+          linkLabel: 'Course page',
+        },
+        {
+          degree: 'B.Sc. Computer Science',
+          institution: 'University of Haifa',
+          year: '2020 – 2024',
+          description: null,
+        },
+      ],
+      projects: [
+        {
+          name: 'IDF HR System',
+          tech: ['React', 'PostgreSQL', 'Supabase'],
+          year: '2023 – Present',
+          description: 'Full-stack personnel management application for a reserve-duty unit.',
+          link: 'https://github.com/DudiMonsonego/Battalion_Managment_System',
+        },
+        {
+          name: 'AssetFlow',
+          tech: ['Next.js', 'TypeScript', 'Supabase', 'PostgreSQL', 'Vercel'],
+          year: '2026',
+          description: 'Full-stack B2B SaaS for hardware lifecycle management.',
+          link: 'https://github.com/DudiMonsonego/AssetFlow',
+          liveLink: 'https://my-assetflow.vercel.app/',
+        },
+      ],
+      skills: [
+        'Programming & Frameworks: Python, JavaScript, TypeScript, React, Java, C, Node.js, SQL, PostgreSQL, GitHub',
+        'Project Management & Ops: Project Lifecycle, Agile/Scrum methodologies, Matrix Leadership, Workflow Optimization, Resource & Budget Control',
+        'AI & Automation Ecosystem: Cursor, Claude Code, Advanced Prompt Engineering, Make, Zapier, API Integration, Airtable, Google Apps Script',
+        'Data & Cloud Infrastructure: Supabase, Vercel, Looker Studio, Power BI, Docker, Linux/Windows CLI, Priority ERP, Familiarity with AWS & VMware',
+      ],
+      experience: [
+        {
+          title: 'Technical Project Manager & Developer',
+          company: 'IDF Reserve Duty',
+          year: '2023 – Present',
+          bullets: [
+            'Developed an internal HR web application using React and Supabase to streamline unit coordination, replacing manual paperwork and saving administrative time.',
+            'Created automated data tracks and Looker Studio dashboards to provide real-time updates and clear tracking for unit commanders.',
+            'Ensured smooth daily operations by training teams on new technical tools and maintaining system and inventory accuracy.',
+          ],
+        },
+        {
+          title: 'Branch & Technical Operations Manager',
+          company: 'Ivory Computers',
+          year: '2013 – 2019',
+          bullets: [
+            'Managed daily branch operations, including hands-on inventory control, stock accuracy, and logistics using Priority ERP.',
+            'Led a local team of technicians and sales representatives, ensuring high service quality and structured work methods.',
+            'Handled technical requirements and troubleshooting for corporate clients and retail customers.',
+          ],
+        },
+      ],
+      languages: [
+        { language: 'English', proficiency: 'Full professional proficiency' },
+        { language: 'Hebrew', proficiency: 'Native proficiency' },
+      ],
+    },
+  },
+  {
     id: 'd7c2e4f8-1a3b-4c5d-9e0f-2b4a6c8d0e1f',
     slug: 'elbit-technical-manager-tm0',
     created_at: '2026-05-26T00:00:00.000Z',
