@@ -359,6 +359,102 @@ export const cvVersions = [
     },
   },
   {
+    id: 'a7b4c2d9-1e8f-4a3b-9c6d-5e4f3a2b1c0d',
+    slug: 'maytronics-junior-system-engineer-m9k',
+    created_at: '2026-06-04T00:00:00.000Z',
+    company_name: 'Maytronics',
+    company_website: 'https://www.maytronics.com',
+    role_title: 'Junior System Engineer – Digital & Applications',
+    status: 'Sent',
+    content: {
+      ...baseContent,
+      noindex: true,
+      label: 'Maytronics — Junior System Engineer – Digital & Applications',
+      title: 'Junior System Engineer – Digital & Applications',
+      bio:
+        'A Computer Science B.Sc. graduate and Certified Project Manager with a strong technical foundation in system development lifecycles, data analytics, and digital transformation. Experienced in troubleshooting complex system issues, conducting functional testing (UAT), and managing technical operations. Proven track record of collaborating with cross-functional teams to implement digital applications, engineer data pipelines, and optimize system performance. Highly detail-oriented and communicative professional seeking to contribute as a Junior System Engineer.',
+      contact: {
+        ...baseContent.contact,
+        website: 'https://portfolio-david-monsonego.vercel.app',
+      },
+      education: [
+        {
+          degree: 'Wix Jumpstart — Reservists Tech Training',
+          institution: 'Wix & Milumentor',
+          year: '2026',
+          description:
+            'Intensive training in modern software methodologies and scalable architecture.',
+          link: 'https://www.wixjumpstart.com/',
+          linkLabel: 'Program website',
+        },
+        {
+          degree: 'TechTroop Project Management Course',
+          institution: 'Elevation',
+          year: '2025 – 2026',
+          description: null,
+          link: 'https://drive.google.com/file/d/1BRLMW1d3u1Xvfb9W2A_1Xl8xbRFdOyra/view',
+          linkLabel: 'Course page',
+        },
+        {
+          degree: 'B.Sc. Computer Science',
+          institution: 'University of Haifa',
+          year: '2020 – 2024',
+          description: null,
+        },
+      ],
+      projects: [
+        {
+          name: 'IDF HR System',
+          tech: ['React', 'PostgreSQL', 'Supabase'],
+          year: '2023 – Present',
+          description: 'Full-stack personnel management application for a reserve-duty unit.',
+          link: 'https://github.com/DudiMonsonego/Battalion_Managment_System',
+        },
+        {
+          name: 'AssetFlow',
+          tech: ['Next.js', 'TypeScript', 'Supabase', 'PostgreSQL', 'Vercel'],
+          year: '2026',
+          description: 'Full-stack B2B SaaS for hardware lifecycle management.',
+          link: 'https://github.com/DudiMonsonego/AssetFlow',
+          liveLink: 'https://my-assetflow.vercel.app/',
+        },
+      ],
+      skills: [
+        'Programming Languages: Python, SQL, PostgreSQL, JavaScript, TypeScript, React, Java, C',
+        'Data & Analytics: Advanced Excel, Looker Studio, Power BI, Data Pipelines',
+        'Infrastructure & Cloud: Docker, Linux (CLI & Shell Scripting), Windows, GitHub, Familiarity with AWS & VMware',
+        'Tools & Enterprise Systems: Priority ERP, Cursor, Claude Code, Make, Zapier, Airtable, Google Apps Script',
+        'Methodologies: System Development Lifecycle (SDLC), Agile, Process Optimization, Technical Documentation, UAT',
+      ],
+      experience: [
+        {
+          title: 'Technical Project Manager & Developer',
+          company: 'IDF Reserve Duty',
+          year: '2023 – Present',
+          bullets: [
+            'Led a unit-wide digital transformation, implementing custom tools and a full-stack HR app (Cursor, Vercel, Supabase PostgreSQL) that cut administrative workload by 50%.',
+            'Managed all system lifecycles as part of a core two-man technical team; executed functional testing (UAT), isolated technical bugs, and ensured 100% operational reliability.',
+            'Built automated data pipelines and Looker Studio dashboards to improve reporting accuracy, while documenting system configurations for future reference.',
+          ],
+        },
+        {
+          title: 'Branch & Technical Operations Manager',
+          company: 'Ivory Computers',
+          year: '2013 – 2019',
+          bullets: [
+            'Managed daily branch operations and customer accounts utilizing Priority ERP for inventory control, sales, and logistics.',
+            'Supervised and trained branch employees, establishing service standards and ensuring high team performance.',
+            'Oversaw overall branch service quality, resolving complex customer issues and technical complaints.',
+          ],
+        },
+      ],
+      languages: [
+        { language: 'English', proficiency: 'Full professional proficiency' },
+        { language: 'Hebrew', proficiency: 'Native proficiency' },
+      ],
+    },
+  },
+  {
     id: 'd7c2e4f8-1a3b-4c5d-9e0f-2b4a6c8d0e1f',
     slug: 'elbit-technical-manager-tm0',
     created_at: '2026-05-26T00:00:00.000Z',
